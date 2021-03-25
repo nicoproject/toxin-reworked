@@ -1,22 +1,22 @@
 {
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
-  "name": "@weareathlon/frontend-webpack-boilerplate",
-  "version": "5.5.0",
-  "description": "Starter project template boilerplate based on Webpack with SASS/PostCSS and babel ES6/7 support.",
-  "homepage": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate#readme",
+  "author": "Nico4000",
+  "name": "toxin-reworked",
+  "version": "1.0.0",
+  "description": "Front-end markup",
+  "homepage": "https://github.com/nicoproject/toxin-reworked",
   "browserslist": [
     "last 2 versions",
     "> 5%"
   ],
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "url": "https://github.com/nicoproject/toxin-reworked/issues",
+    "email": "nicoproject@ya.ru"
   },
   "contributors": [
     {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
+      "name": "Nico4000",
+      "email": "nicoproject@ya.ru",
+      "url": "https://github.com/nicoproject/toxin-reworked"
     }
   ],
   "devDependencies": {
@@ -60,21 +60,20 @@
     "node": "^10 || ^12 || >=14"
   },
   "keywords": [
-    "webpack",
-    "boilerplate",
-    "template",
-    "setup"
+    "PUG",
+    "SCSS",
+    "JS",
+    "JQuery"
   ],
   "license": "MIT",
-  "private": false,
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
+    "url": "https://github.com/nicoproject/toxin-reworked.git"
   },
   "scripts": {
     "build": "webpack --config configuration/webpack.dev.config.js --mode=development",
     "watch": "webpack --config configuration/webpack.dev.config.js --mode=development --watch",
-    "bundle": "npm install && npm run watch",
     "dev": "webpack serve --config configuration/webpack.dev.config.js --mode=development",
     "production": "webpack --config configuration/webpack.prod.config.js --mode=production",
     "lint:sass": "sass-lint -v -q",
