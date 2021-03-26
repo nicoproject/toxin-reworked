@@ -1,0 +1,32 @@
+extends ../layout/default-layout
+
+block variables
+  - var title = 'Toxin ReWorked';
+  - var description = 'Frontend test project';
+  - var pageClass = 'index-page';
+
+block content
+  .navigation
+    ul.main-menu
+      li
+        a(href='/ui-kit.html') О нас
+      li.has-submenu
+        a(href='/cards.html') Услуги
+      li
+        a(href='/landing.html') Вакансии
+      li.has-submenu
+        a(href='/search.html') Соглашения
+  section
+    .container
+      +item('item title', 'item descr')
+      +item('item title', 'item descr')
+      +item('item title', 'item descr')
+
+
+block script
+  script(type='text/javascript').
+    const foo = true;
+    let bar = function() {};
+    if (foo) {
+    bar(1 + 5)
+    }
