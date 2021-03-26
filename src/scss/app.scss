@@ -17,7 +17,12 @@
 
 /* Vendor */
 
-/* Components */
+/* Layout grid styles */
+@import 'layout/layout';
 
-/* Demo Page styles */
-@import 'custom';
+
+/* Components */
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/input';
+

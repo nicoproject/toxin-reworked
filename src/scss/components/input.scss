@@ -1,0 +1,34 @@
+.default-input {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  color: $dark-shade-75;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding: 12px 15px;
+  min-width: 320px;
+
+  margin: 3px 0 15px 0;
+
+  display: block;
+}
+
+.default-input::placeholder {
+  color: $dark-shade-25;
+}
+
+.default-input:hover,
+.default-input:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.defaul-input__arrow {
+  background: #ffffff url('../images/design/expand_more.png') no-repeat 298px 18px;
+  padding: 13px 15px;
+}

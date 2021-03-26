@@ -6,12 +6,62 @@
 /* Breakpoints */
 /* Paths */
 /* Grid setup */
+
 /* Colour palette */
+// Fonts
+$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+$secondFont              : 'Open Sans', Helvetica, Arial, sans-serif;
+$thirdFont               : 'Quicksand', Helvetica, Arial, sans-serif;
+$iconsFont               : 'Material Icons', Helvetica, Arial, sans-serif;
+
+// Size
+$mainFontColor           : rgba(31, 32, 65, 0.75);
+$mainFontSize            : 14px;
+$mainFontWeight          : normal;
+$mainLineHeight          : 24px;
+
+$desktopWidth            : 1280px;
+$smDesktopWidth          : 980px;
+$tableWidth              : 768px;
+$phoneWidth              : 480px;
+$smPhoneWidth            : 320px;
+
+// Main color
+$default-color           : #ffffff;
+$primary-color           : #BC9CFF;
+$success-color           : #26de81;
+$danger-color            : #fc5c65;
+$warning-color           : #fed330;
+$light-color             : #999999;
+  //Toxin
+$purple-color            : #BC9CFF;
+$green-color             : #6FCF97;
+
+// Neutral Color
+$neutral-primary         : #303133;
+$neutral-regular         : #606266;
+$neutral-secondary       : #909399;
+$neutral-placeholder     : #C0C4CC;
+
+// Border Color
+$border-base             : #DCDFE6;
+$border-light            : #E4E7ED;
+$border-lighter          : #EBEEF5;
+$border-lightex          : #F2F6FC;
+
+//Toxin template colors
+$dark-shade-100           : #1F2041;
+$dark-shade-75            : rgba(31, 32, 65, 0.75);
+$dark-shade-50            : rgba(31, 32, 65, 0.5);
+$dark-shade-25            : rgba(31, 32, 65, 0.25);
+$dark-shade-5             : rgba(31, 32, 65, 0.05);
+
+
 $black: #000;
 $white: #fff;
 $light-gray: #f1f1f1;
 
-$body-background-color: #333;
+$body-background-color: #fff;
 $foreground-color: #fff;
 $caption-color: #464646;
 $accent-color: #999;

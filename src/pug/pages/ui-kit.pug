@@ -6,11 +6,12 @@ block variables
   - var pageClass = 'ui-kit-page';
 
 block content
-  section
-    .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
+  .container
+    .form-elements
+      form(action='', method='POST')
+        .form-col
+          h3 Text field
+          include ../components/input
 
 
 block script

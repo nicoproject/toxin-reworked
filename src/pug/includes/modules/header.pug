@@ -1,3 +1,21 @@
-header
+header.layout-header
   .container
-    span header
+    .header-content
+      .logo-container
+        a(href="index.html")
+          img(src='/images/content/logo.svg', alt='message')
+
+      .navigation
+        ul.main-menu
+          li
+            a(href='/ui-kit.html') UI Kit
+          li.has-submenu
+            a(href='/cards.html') Услуги
+          li
+            a(href='/landing.html') Вакансии
+          li.has-submenu
+            a(href='/search.html') Соглашения
+            
+        .header__account-buttons 
+          button.sign-in-button.standart-button__gradient(type='button', onclick="window.location.href='/sign_in.html'") Войти
+          button.register-button.standart-button__gradient(type='button', onclick="window.location.href='/register.html'") Зарегистрироваться
