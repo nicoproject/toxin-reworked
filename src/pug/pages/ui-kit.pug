@@ -1,0 +1,22 @@
+extends ../layout/default-layout
+
+block variables
+  - var title = 'Toxin ReWorked: UI Kit';
+  - var description = 'UI Kit element page';
+  - var pageClass = 'ui-kit-page';
+
+block content
+  section
+    .container
+      +item('item title', 'item descr')
+      +item('item title', 'item descr')
+      +item('item title', 'item descr')
+
+
+block script
+  script(type='text/javascript').
+    const foo = true;
+    let bar = function() {};
+    if (foo) {
+    bar(1 + 5)
+    }

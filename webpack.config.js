@@ -2,27 +2,39 @@
  * Webpack main configuration file
  */
 
-const path = require('path');
-const fs = require('fs');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
-const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { extendDefaultPlugins } = require('svgo');
+const path = require('path')
+const fs = require('fs')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { extendDefaultPlugins } = require('svgo')
 
-const environment = require('./configuration/environment');
+const environment = require('./configuration/environment')
 
-const templateFiles = fs.readdirSync(environment.paths.source)
-  .filter((file) => path.extname(file).toLowerCase() === '.html');
+// const templateFiles = fs
+//   .readdirSync(environment.paths.source)
+//   .filter((file) => path.extname(file).toLowerCase() === '.pug')
 
-const htmlPluginEntries = templateFiles.map((template) => new HTMLWebpackPlugin({
-  inject: true,
-  hash: false,
-  filename: template,
-  template: path.resolve(environment.paths.source, template),
-  favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-}));
+// const htmlPluginEntries = templateFiles.map(
+//   (template) =>
+//     new HTMLWebpackPlugin({
+//       inject: true,
+//       hash: false,
+//       filename: template,
+//       template: path.resolve( `${environment.paths.source}/pug/`, template),
+//       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
+//     }),
+// )
+
+const PAGES_DIR = `${environment.paths.source}\\pug\\pages\\`
+const PAGES = fs
+  .readdirSync(PAGES_DIR)
+  .filter((fileName) => fileName.endsWith('.pug'))
+
+console.log(PAGES_DIR, 'PAGES_DIR')
+console.log(PAGES, 'PAGES')
 
 module.exports = {
   entry: {
@@ -35,8 +47,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        use: ['pug-loader'],
+      },
+      {
         test: /\.((c|sa|sc)ss)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.js$/,
@@ -102,6 +123,10 @@ module.exports = {
       verbose: true,
       cleanOnceBeforeBuildPatterns: ['**/*', '!stats.json'],
     }),
+    ...PAGES.map(page => new HTMLWebpackPlugin ({
+      template: `${PAGES_DIR}/${page}`,
+      filename: `./${page.replace(/\.pug/,'.html')}`
+    })),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -114,6 +139,7 @@ module.exports = {
         },
       ],
     }),
-  ].concat(htmlPluginEntries),
+  ],
+  // ].concat(htmlPluginEntries),
   target: 'web',
-};
+}
