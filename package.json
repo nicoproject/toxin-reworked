@@ -83,6 +83,7 @@
   "target": "web",
   "dependencies": {
     "jquery": "^3.6.0",
+    "jquery-mask-plugin": "^1.14.16",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "style-loader": "^2.0.0",
