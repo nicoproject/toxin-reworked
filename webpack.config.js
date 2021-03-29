@@ -2,8 +2,10 @@
  * Webpack main configuration file
  */
 
+/* Includes const */
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
@@ -11,30 +13,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { extendDefaultPlugins } = require('svgo')
 
+/* ENV const */
 const environment = require('./configuration/environment')
-
-// const templateFiles = fs
-//   .readdirSync(environment.paths.source)
-//   .filter((file) => path.extname(file).toLowerCase() === '.pug')
-
-// const htmlPluginEntries = templateFiles.map(
-//   (template) =>
-//     new HTMLWebpackPlugin({
-//       inject: true,
-//       hash: false,
-//       filename: template,
-//       template: path.resolve( `${environment.paths.source}/pug/`, template),
-//       favicon: path.resolve(environment.paths.source, 'images', 'favicon.ico'),
-//     }),
-// )
-
 const PAGES_DIR = `${environment.paths.source}\\pug\\pages\\`
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter((fileName) => fileName.endsWith('.pug'))
-
-console.log(PAGES_DIR, 'PAGES_DIR')
-console.log(PAGES, 'PAGES')
 
 module.exports = {
   entry: {
@@ -51,12 +35,21 @@ module.exports = {
         use: ['pug-loader'],
       },
       {
-        test: /\.((c|sa|sc)ss)$/i,
+        test: /\.s[ac]ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
       {
@@ -93,6 +86,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
