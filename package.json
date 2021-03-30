@@ -82,6 +82,7 @@
   },
   "target": "web",
   "dependencies": {
+    "air-datepicker": "^2.2.3",
     "jquery": "^3.6.0",
     "jquery-mask-plugin": "^1.14.16",
     "pug": "^3.0.2",

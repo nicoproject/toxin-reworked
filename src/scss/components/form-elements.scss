@@ -1,0 +1,11 @@
+.form-elements {
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.form-col {
+  justify-content: space-around;
+  flex: 1 100%;
+}

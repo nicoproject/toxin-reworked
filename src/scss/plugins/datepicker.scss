@@ -1,0 +1,115 @@
+@import '../../node_modules/air-datepicker/dist/css/datepicker.min.css';
+
+.datepicker--nav-title {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $dark-shade-100;
+}
+
+.datepicker--nav-title i {
+  font-style: normal;
+  color: $dark-shade-100 !important;
+  margin-left: 5px;
+}
+
+.datepicker {
+  border-radius: 22px;
+  width: 320px !important;
+}
+
+.datepicker--day-name {
+  color: $purple-color !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  text-transform: none !important;
+  font-size: 12px !important;
+  font-weight: bold;
+}
+
+.datepicker--cell {
+  border-radius: 22px !important;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 44px !important;
+  z-index: 1;
+  font-size: 12px !important;
+  font-family: $mainFont;
+  color: $dark-shade-50;
+}
+
+.datepicker--cell:hover {
+  border-radius: 22px !important;
+  color: $default-color;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+}
+
+.datepicker--cell.-focus- {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+  color: $default-color;
+  border-radius: 22px !important;
+}
+
+.datepicker--cell.-selected- {
+  color: #fff;
+  border: none;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+}
+
+.datepicker--cell.-range-from-.-selected-,
+.datepicker--cell.-range-to-.-selected- {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%) !important;
+}
+
+.datepicker--cell.-in-range- {
+  background: linear-gradient(180deg, #e2e8fd 0%, #eee6fe 100%) !important;
+  border-radius: 0 !important;
+  color: rgba(31, 32, 65, 0.5) !important;
+}
+
+.datepicker--button {
+  color: rgba(31, 32, 65, 0.5) !important;
+  font-family: $mainFont !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  cursor: pointer;
+  border-radius: 4px;
+  flex: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  text-transform: uppercase;
+}
+
+.datepicker--button:hover {
+  color: $purple-color !important;
+}
+
+.datepicker--nav-action path {
+  fill: #bc9cff !important;
+  stroke: #9c9c9c;
+  stroke-width: 0 !important;
+}
+
+.datepicker--nav-action svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0 !important;
+  min-height: 32px;
+  padding: 15px 4px !important;
+}
