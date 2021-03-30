@@ -4,6 +4,7 @@
 
 .default-dropdown-calc {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .default-dropdown-calc {
@@ -12,12 +13,12 @@
 
 .default-dropdown-calc__header {
   height: 44px;
-  background: #fff url('../images/design/expand_more.png') no-repeat 291px 17px;
+  // background: #fff url('../images/design/expand_more.png') no-repeat 291px 17px;
   cursor: pointer;
 
-  border: 1px solid $dark-shade-50;
+  border: 1px solid $dark-shade-25;
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 4px;
 
   padding-left: 15px;
 
@@ -34,7 +35,7 @@
   border: 1px solid $dark-shade-50;
   box-sizing: border-box;
   border-top: 0;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .guests-dropdown-calc .default-dropdown-calc__header {
@@ -43,6 +44,14 @@
 
 .guests-dropdown-calc .default-dropdown__calc_content {
   width: 320px;
+}
+
+.guests-dropdown-calc .material-icons {
+  width: 24px;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: $dark-shade-50;
 }
 
 .rooms-dropdown-calc .default-dropdown-calc__header {

@@ -1,7 +1,16 @@
+.date-dropdown-wrapper {
+  position: relative;
+  float: left;
+
+  .material-icons {
+    position: absolute;
+    top: 11px;
+    right: 30px;
+  }
+}
+
 .date-dropdown {
   appearance: none;
-  background: #ffffff url('../images/design/expand_more.png') no-repeat 121px
-    18px;
 
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;

@@ -10,6 +10,6 @@ import './components/dropdown'
 
 /* UI Kit */
 $('.masked-input').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
-$('.date-dropdown').datepicker()
+$('.date-dropdown').datepicker().mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
 // $('.masked-input').datepicker()
 
