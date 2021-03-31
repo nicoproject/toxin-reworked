@@ -5,7 +5,7 @@
 /* Includes const */
 const path = require('path')
 const fs = require('fs')
-const webpack = require('webpack');
+const webpack = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
@@ -37,15 +37,25 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               sourceMap: true,
             },
           },
           {
-            loader: "sass-loader",
+            'loader': 'postcss-loader',
+            'options': {
+              // All postcss options is now under `postcssOptions`
+              'postcssOptions': {
+                'config': path.resolve('./postcss.config.js'),
+              },
+              'sourceMap': true,
+            },
+          },
+          {
+            loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
@@ -88,7 +98,7 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
@@ -120,10 +130,13 @@ module.exports = {
       verbose: true,
       cleanOnceBeforeBuildPatterns: ['**/*', '!stats.json'],
     }),
-    ...PAGES.map(page => new HTMLWebpackPlugin ({
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
+    ...PAGES.map(
+      (page) =>
+        new HTMLWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `./${page.replace(/\.pug/, '.html')}`,
+        }),
+    ),
     new CopyWebpackPlugin({
       patterns: [
         {
