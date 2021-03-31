@@ -6,8 +6,9 @@
     position: absolute;
     top: 10px;
     right: 10px;
-
-    color: #BC9CFF;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background-clip: text;
+    color: transparent;
   }
 
   .default-input {

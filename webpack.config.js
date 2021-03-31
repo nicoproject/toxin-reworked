@@ -47,7 +47,6 @@ module.exports = {
           {
             'loader': 'postcss-loader',
             'options': {
-              // All postcss options is now under `postcssOptions`
               'postcssOptions': {
                 'config': path.resolve('./postcss.config.js'),
               },
