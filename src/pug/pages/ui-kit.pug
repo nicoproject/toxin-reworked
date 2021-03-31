@@ -30,20 +30,16 @@ block content
         // Second column
         .form-col
           h3 Checkbox Buttons
-          label.default-label 
-            input.default-checkbox(type='checkbox', checked)
-            span
-              | Можно курить
-          label.default-label
-            input.default-checkbox(type='checkbox')
-            span
-              | Можно с питомцами
-          label.default-label 
-            input.default-checkbox(type='checkbox')
-            span
-              | Можно пригласить гостей 
-              br 
-              | (до 10 человек) 
+          include ../components/checkbox
+          h3 Radio Buttons
+          label.container-radio
+            | Мужчина
+            input(type='radio', checked='checked', name='radio-gender', value='male')
+            span.checkmark
+          label.container-radio
+            | Женщина
+            input(type='radio', name='radio-gender', value='female')
+            span.checkmark
 
 block script
   script(type='text/javascript').
