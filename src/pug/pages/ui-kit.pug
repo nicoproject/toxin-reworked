@@ -32,14 +32,11 @@ block content
           h3 Checkbox Buttons
           include ../components/checkbox
           h3 Radio Buttons
-          label.container-radio
-            | Мужчина
-            input(type='radio', checked='checked', name='radio-gender', value='male')
-            span.checkmark
-          label.container-radio
-            | Женщина
-            input(type='radio', name='radio-gender', value='female')
-            span.checkmark
+          include ../components/radiobutton
+          h3 Toggle
+          include ../components/toggle
+
+
 
 block script
   script(type='text/javascript').

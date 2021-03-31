@@ -21,7 +21,6 @@
 /* Layout grid styles */
 @import 'layout/layout';
 
-
 /* Components */
 @import 'components/header';
 @import 'components/footer';
@@ -34,6 +33,7 @@
 @import 'components/input-subscribtion';
 @import 'components/checkbox';
 @import 'components/radiobutton';
+@import 'components/toggle';
 
 /*Plugins */
 @import 'plugins/datepicker'
