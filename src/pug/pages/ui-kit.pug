@@ -20,11 +20,30 @@ block content
           include ../components/input-masked
 
           h3 Date Dropdown
-          include ../components/dropdown-date
-          include ../components/dropdown-date
+          .flex-between
+            include ../components/dropdown-date
+            include ../components/dropdown-date
 
           h3 Email Subscription 
           include ../components/input-subscription
+
+        // Second column
+        .form-col
+          h3 Checkbox Buttons
+          label.default-label 
+            input.default-checkbox(type='checkbox', checked)
+            span
+              | Можно курить
+          label.default-label
+            input.default-checkbox(type='checkbox')
+            span
+              | Можно с питомцами
+          label.default-label 
+            input.default-checkbox(type='checkbox')
+            span
+              | Можно пригласить гостей 
+              br 
+              | (до 10 человек) 
 
 block script
   script(type='text/javascript').

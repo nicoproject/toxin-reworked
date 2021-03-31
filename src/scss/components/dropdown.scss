@@ -47,11 +47,14 @@
 }
 
 .guests-dropdown-calc .material-icons {
-  width: 24px;
   position: absolute;
-  right: 30px;
+  width: 24px;
+  right: 10px;
   top: 10px;
+  cursor: pointer;
   color: $dark-shade-50;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 
 .rooms-dropdown-calc .default-dropdown-calc__header {

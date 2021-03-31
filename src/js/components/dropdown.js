@@ -1,6 +1,12 @@
 //Expandable dropdown
 $('.default-dropdown-calc__header').click(function () {
   $(this).next().slideToggle()
+  $('.default-dropdown-calc > span.material-icons').toggleClass('rotate180');
+})
+
+$('.default-dropdown-calc > span.material-icons ').click(function () {
+  $('.default-dropdown__calc_content').slideToggle()
+  $(this).toggleClass('rotate180');
 })
 
 //MINUS BUTTON
