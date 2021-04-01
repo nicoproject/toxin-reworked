@@ -22,27 +22,27 @@
   cursor: default;
   font-weight: normal;
   line-height: 17px;
-  padding: 0 0 13px 0;
+  padding: 0 0 10px 0;
   display: block;
 
   span {
-    padding-left: 29px;
     display: inline-block;
+    line-height: 16px;
   }
 }
 
 .default-label:before {
   content: ' ';
+  position: relative;
   display: inline-block;
-  margin-right: 10px;
-  position: absolute;
+  background: #fff;
   width: 20px;
   height: 20px;
-  background: #fff;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
-  vertical-align: middle;
+  margin-right: 8px;
+  vertical-align: top;
 }
 
 /* checked */

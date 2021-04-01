@@ -8,6 +8,7 @@ import '../scss/app.scss'
 /* Components */
 import './components/dropdown'
 import './components/checkbox'
+import './components/checkbox-expandable'
 
 /* UI Kit */
 $('.input-masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })

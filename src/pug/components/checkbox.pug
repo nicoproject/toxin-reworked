@@ -1,14 +1,3 @@
-label.default-label 
-  input.default-checkbox(type='checkbox', checked)
-  span
-    | Можно курить
-label.default-label
-  input.default-checkbox(type='checkbox')
-  span
-    | Можно с питомцами
-label.default-label 
-  input.default-checkbox(type='checkbox')
-  span
-    | Можно пригласить гостей 
-    br 
-    | (до 10 человек) 
++generateCheckbox('Можно курить')
++generateCheckbox('Можно с питомцами', 'checked')
++generateCheckbox('Можно пригласить гостей<br>(до 10 человек)', 'checked')

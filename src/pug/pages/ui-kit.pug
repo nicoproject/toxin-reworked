@@ -24,6 +24,15 @@ block content
           include ../components/input-subscription
           h3 Dropdown Rooms
           include ../components/dropdown-rooms
+          .expandable-button
+            h3 Expandable Checkbox List
+          .expandable-checkbox-list-container
+            +generateCheckbox('Завтрак', 'checked')
+            +generateCheckbox('Письменный стол', 'checked')
+            +generateCheckbox('Стул для кормления', 'checked')
+            +generateCheckbox('Кроватка', 'checked')
+            +generateCheckbox('Телевизор')
+            +generateCheckbox('Шампунь')
 
         // Second column
         .form-col
@@ -37,7 +46,6 @@ block content
           include ../components/like
           h3 Rate button
           include ../components/rate
-
 
 
 block script
