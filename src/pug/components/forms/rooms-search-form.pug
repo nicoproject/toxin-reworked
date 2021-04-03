@@ -3,10 +3,10 @@ form.form.form-rooms-search
   .rooms-search-dates-container.flex-between
     .column
       h3 Прибытие
-      input.default-input.masked.date-input.datepicker-here(type='text', placeholder='ДД.ММ.ГГГГ')
+      +input("masked date-input datepicker-here arrival", "text", "ДД.ММ.ГГГГ")
     .column
       h3 Выезд
-      input.default-input.masked.date-input.datepicker-here(type='text', placeholder='ДД.ММ.ГГГГ')
+      +input("masked date-input datepicker-here departure", "text", "ДД.ММ.ГГГГ")
   h3 Гости
   include ../../components/dropdown-guests
-  a.default-button.default-button__gradient.default-button__arrow.default-button__fullwidth(href="#") Подобрать номер      
+  +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Подобрать номер")

@@ -36,6 +36,7 @@
 //-------ROOMS-SEARCH--
 .form-rooms-search {
   max-width: 380px;
+  margin-bottom: 22px;
 
   .guests-dropdown-calc {
     margin-top: 5px;
@@ -60,4 +61,50 @@
 .date-input {
   min-width: 150px;
   width: 155px;
+}
+
+//------REGISTRATION
+.form-registration {
+  .form-title {
+    margin: 40px 0 20px 0;
+  }
+
+  .default-input {
+    margin: 5px 0 12px 0;
+  }
+
+  .default-button {
+    margin: 24px 0 5px 0;
+  }
+
+  .aready-registered-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 0 28px 0;
+  }
+
+  .already-registered {
+    line-height: 40px;
+  }
+
+  .signIn-button {
+    margin: 0;
+    width: 97px;
+  }
+
+  .last-name {
+    margin-bottom: 8px;
+  }
+  .sex-female {
+    margin-bottom: 22px;
+  }
+
+  .birthday-date {
+    margin-bottom: 19px;
+    width: 100%;
+  }
+
+  .password {
+    margin-bottom: 9px;
+  }
 }
