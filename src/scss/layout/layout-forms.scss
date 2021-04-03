@@ -44,6 +44,16 @@
   text-align: left;
 }
 
+.aready-registered-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 26px 0 28px 0;
+}
+
+.already-registered {
+  line-height: 40px;
+}
+
 //-------ROOMS-SEARCH--
 .form-rooms-search {
   max-width: 380px;
@@ -88,16 +98,6 @@
     margin: 24px 0 5px 0;
   }
 
-  .aready-registered-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 26px 0 28px 0;
-  }
-
-  .already-registered {
-    line-height: 40px;
-  }
-
   .signIn-button {
     margin: 0;
     width: 97px;
@@ -122,12 +122,14 @@
 
 //-------ROOM BOOKING
 .form-room-booking {
+  margin-bottom: 25px;
+
   .rooms-search-dates-container {
     margin-bottom: 9px;
   }
 
   .default-button {
-    margin: 20px 0 10px 0;
+    margin: 20px 0 25px 0;
   }
 
   .guests-dropdown-calc {
@@ -267,5 +269,24 @@
     position: absolute;
     left: 19%;
     top: -7px;
+  }
+}
+
+//------SIGN IN
+.form-sign-in {
+  .form-title {
+    margin: 40px 0 20px;
+  }
+
+  .email {
+    margin: 10px 0;
+  }
+
+  .default-button {
+    margin: 3px 0 2px 0;
+  }
+
+  .create-account-button {
+    width: 98px;
   }
 }
