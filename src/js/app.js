@@ -2,6 +2,9 @@
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
+require('../../node_modules/bxslider/src/js/jquery.bxslider.js')
+
+// import 'bxslider'
 
 import '../scss/app.scss'
 
@@ -45,4 +48,9 @@ $('.js-range-slider').ionRangeSlider({
   grid: false,
   skin: 'round',
   postfix: "<span class='rub'>Р</span>",
+})
+
+$('.bxslider').bxSlider({
+  nextText: '<i class="material-icons">keyboard_arrow_right</i>',
+  prevText: '<i class="material-icons">keyboard_arrow_left</i>',
 })
