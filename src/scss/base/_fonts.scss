@@ -1,11 +1,21 @@
-/**
- * Fonts
-*/
+/** Fonts here */
 
-@font-face {
-  font-family: 'DINP-R';
-  src: url("../fonts/DINPro-Regular.eot?") format("eot"),
-  url("../fonts/DINPro-Regular.woff") format("woff"),
-  url("../fonts/DINPro-Regular.ttf") format("truetype");
-  font-style: normal;
-}
+/** 
+* Add font: MONTSERRAT 
+*/
+@import '../../fonts/Montserrat/montserrat.scss';
+
+/** 
+* Add font: QUICKSAND 
+*/
+@import '../../fonts/quicksand/quicksand.scss';
+
+/** 
+* Add font: MATERIAL ICONS 
+*/
+@import '../../fonts/material_icons/material_icons.scss';
+
+/** 
+* Add font: OPEN SANS 
+*/
+@import '../../fonts/opensans/opensans.scss';

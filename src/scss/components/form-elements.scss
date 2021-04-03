@@ -1,0 +1,12 @@
+.form-elements {
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.form-col {
+  justify-content: space-around;
+  width: 320px;
+  margin-right: 125px;
+}

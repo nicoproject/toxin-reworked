@@ -1,0 +1,26 @@
+.default-dropdown-calc.guests-dropdown-calc
+  span.material-icons
+    | expand_more
+  input.default-dropdown-calc__header(type='text', readonly='', placeholder="Сколько гостей")
+  .default-dropdown__calc_content
+    .default-dropdown-calc__item
+      label.calc-item-label(for='adults-quantity') Взрослые 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#adults-quantity(min='0', name='adults-quantity', value='1', type='number')
+        button.plus(type='button')
+    .default-dropdown-calc__item
+      label.calc-item-label(for='children-quantity') Дети 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#children-quantity(min='0', name='children-quantity', value='0', type='number')
+        button.plus(type='button')
+    .default-dropdown-calc__item
+      label.calc-item-label(for='toddlers-quantity') Младенцы 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#toddlers-quantity(min='0', name='toddlers-quantity', value='0', type='number')
+        button.plus(type='button')
+    .default-dropdown-calc__footer
+      <span class="dropdown-calc__button clear_button">Очистить</span>
+      <span class="dropdown-calc__button apply_button">Применить</span>

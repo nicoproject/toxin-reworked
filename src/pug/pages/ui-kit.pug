@@ -6,11 +6,66 @@ block variables
   - var pageClass = 'ui-kit-page';
 
 block content
-  section
-    .container
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
-      +item('item title', 'item descr')
+  .container
+    //- First column
+    .form-elements
+      form(action='', method='POST')
+        .form-col
+          h3 Text field
+          include ../components/input
+          h3 Dropdown guests
+          include ../components/dropdown-guests
+          h3 Masked input
+          include ../components/input-masked
+          h3 Date Dropdown
+          .flex-between
+            include ../components/dropdown-date
+            include ../components/dropdown-date
+          h3 Email Subscription 
+          include ../components/input-subscription
+          h3 Dropdown Rooms
+          include ../components/dropdown-rooms
+          .expandable-button
+            h3 Expandable Checkbox List
+          .expandable-checkbox-list-container
+            +generateCheckbox('Завтрак', 'checked')
+            +generateCheckbox('Письменный стол', 'checked')
+            +generateCheckbox('Стул для кормления', 'checked')
+            +generateCheckbox('Кроватка', 'checked')
+            +generateCheckbox('Телевизор')
+            +generateCheckbox('Шампунь')
+          h3 Features
+          include ../components/features
+
+
+        //- Second column
+        .form-col
+          h3 Checkbox Buttons
+          include ../components/checkbox
+          h3 Radio Buttons
+          include ../components/radiobutton
+          h3 Toggle
+          include ../components/toggle
+          h3 Like button
+          include ../components/like
+          h3 Rate button
+          include ../components/rate
+          h3  Rich Checkbox Buttons
+          include ../components/checkbox-rich
+          h3 Reviews
+          include ../components/review
+
+        //- Third column
+        .form-col
+          h3 Range slider
+          input.js-range-slider(type="text", name="my_range", value="")
+          h3 Buttons
+          include ../components/buttons
+          h3 Pagination
+          include ../components/pagination
+          h3 Bullet List
+          include ../components/bullet-list
+
 
 
 block script

@@ -1,0 +1,23 @@
+.default-dropdown-calc.rooms-dropdown-calc
+  span.material-icons
+    | expand_more
+  input.default-dropdown-calc__header(type='text', readonly='', placeholder="Укажите кол-во комнат")
+  .default-dropdown__calc_content
+    .default-dropdown-calc__item
+      label.calc-item-label(for='rooms-quantity') Спальни 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#rooms-quantity(min='0', name='rooms-quantity', value='1', type='number')
+        button.plus(type='button')
+    .default-dropdown-calc__item
+      label.calc-item-label(for='beds-quantity') Кровати 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#beds-quantity(min='0', name='beds-quantity', value='0', type='number')
+        button.plus(type='button')
+    .default-dropdown-calc__item
+      label.calc-item-label(for='bathroom-quantity') Ванные комнаты 
+      .calc-quantity-input
+        button.minus(type='button')
+        input#bathroom-quantity(min='0', name='bathroom-quantity', value='0', type='number')
+        button.plus(type='button')

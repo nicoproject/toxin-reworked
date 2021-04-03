@@ -1,0 +1,57 @@
+//----------------------------------
+//---------DEFAULT CHECKBOX---------
+//----------------------------------
+.default-checkbox {
+  appearance: auto;
+  display: none;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  vertical-align: middle;
+}
+
+.default-checkbox:checked {
+  background: #ffffff url('../images/design/input_checked.png') no-repeat 298px 18px;
+}
+
+.default-label {
+  color: $dark-shade-50;
+  cursor: default;
+  font-weight: normal;
+  line-height: 17px;
+  padding: 0 0 10px 0;
+  display: block;
+
+  span {
+    display: inline-block;
+    line-height: 16px;
+  }
+}
+
+.default-label:before {
+  content: ' ';
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: top;
+}
+
+/* checked */
+.default-label.checked:before {
+  content: '';
+  background: url(../images/design/input_checked.png) no-repeat 4px 3px;
+  border: 1px solid $purple-color;
+}
+/* disabled */
+.default-checkbox:disabled + .default-label:before {
+  background: #eee;
+}
