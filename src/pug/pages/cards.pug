@@ -1,0 +1,15 @@
+extends ../layout/default-layout
+
+block variables
+  - var title = 'Toxin ReWorked: Cards page';
+  - var description = 'Cards page (forms)';
+  - var pageClass = 'cards-page';
+
+block content
+  .container
+    .cards-col
+      //- Room search form
+      h3 Rooms search form
+      include ../components/forms/rooms-search-form.pug
+
+

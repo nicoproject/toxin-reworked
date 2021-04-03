@@ -1,0 +1,63 @@
+//-------LAYOUT
+.cards-page.container {
+  display: flex;
+}
+
+.cards-col {
+}
+
+//-------GENERAL FORM STYLES--
+.cards-container {
+}
+
+.form {
+  position: relative;
+  width: 380px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 0 30px;
+}
+
+.form-title {
+  font-family: $secondFont;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: none;
+  color: $dark-shade-100;
+  line-height: 30px;
+  margin: 35px 0 25px 0;
+  text-align: left;
+}
+
+//-------ROOMS-SEARCH--
+.form-rooms-search {
+  max-width: 380px;
+
+  .guests-dropdown-calc {
+    margin-top: 5px;
+  }
+
+  .default-button {
+    margin: 10px 0 30px 0;
+  }
+}
+
+.rooms-search-dates-container {
+  margin-bottom: 6px;
+
+  .date-input {
+    width: 150px;
+  }
+
+  .column {
+  }
+}
+
+.date-input {
+  min-width: 150px;
+  width: 155px;
+}
