@@ -6,7 +6,7 @@ block variables
   - var pageClass = 'cards-page';
 
 block content
-  .container
+  .container.flex-between
     .cards-col
       //- Room search form
       h3 Rooms search form
@@ -14,4 +14,10 @@ block content
       h3 Registration form
       include ../components/forms/registration-form
 
+    .cards-col
+      h3 Room booking
+      include ../components/forms/room-booking-form
+
+    .cards-col
+      h3 Room booking
 
