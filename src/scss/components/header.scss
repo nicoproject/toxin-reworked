@@ -21,41 +21,45 @@
 }
 
 .standart-button__gradient {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   font-family: $mainFont;
   font-weight: bold;
   font-size: 12px;
-
   padding: 0 15px;
   height: 34px;
-
   color: #fff;
-
   text-transform: uppercase;
+  border: none;
+}
 
+.sign-in-button {
+  $border: 2px;
+  position: relative;
+  box-sizing: border-box;
+
+  color: #bc9cff;
+  background: #fff;
+  background-clip: padding-box; /* !importanté */
+  border: solid $border transparent; /* !importanté */
+  border-radius: 22px;
+  margin-right: 20px;
+  width: 87px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   }
+}
 
-  .sign-in-button {
-    $border: 2px;
-    position: relative;
-    box-sizing: border-box;
-    
-    color: #BC9CFF;
-    background: #fff;
-    background-clip: padding-box; /* !importanté */
-    border: solid $border transparent; /* !importanté */
-    border-radius: 22px;
-    margin-right: 20px;
-  
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -1;
-        margin: -$border; /* !importanté */
-        border-radius: inherit; /* !importanté */
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-      }
-    }
+.register-button {
+  width: 196px;
+}
