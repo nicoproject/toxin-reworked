@@ -1,7 +1,7 @@
 /*TYPOGRAPHY STYLES */
 /* -----------------*/
 h1 {
-  font-family: 'Quicksand';
+  font-family: $mainFont;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -10,7 +10,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Quicksand';
+  font-family: $mainFont;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
@@ -19,12 +19,23 @@ h2 {
 }
 
 h3 {
-  font-family: 'Montserrat';
+  font-family: $mainFont;
   font-style: normal;
   font-weight: bold;
   font-size: 11px;
   line-height: 15px;
   color: $dark-shade-100;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
+}
+
+h2.search-room-result__title {
+  font-family: $mainFont;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 22px;
 }

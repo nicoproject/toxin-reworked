@@ -48,6 +48,7 @@ $('.js-range-slider').ionRangeSlider({
   grid: false,
   skin: 'round',
   postfix: "<span class='rub'>Р</span>",
+  hide_min_max: true, 
 })
 
 $('.bxslider').bxSlider({
