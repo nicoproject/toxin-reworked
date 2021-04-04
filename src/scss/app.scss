@@ -20,6 +20,7 @@
 
 /* Layout grid styles */
 @import 'layout/layout';
+@import 'layout/layout-forms';
 
 /* Components */
 @import 'components/header';
@@ -43,7 +44,9 @@
 @import 'components/buttons';
 @import 'components/pagination';
 @import 'components/bullet-list';
+@import 'components/room-card-preview';
 
 /*Plugins */
 @import 'plugins/datepicker';
 @import 'plugins/rangeslider';
+@import 'plugins/bxslider';

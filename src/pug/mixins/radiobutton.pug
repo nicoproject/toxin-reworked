@@ -1,0 +1,5 @@
+mixin createRadiobutton(labelClass, labelText, inputChecked, inputName, inputValue )
+  label.container-radio(class=labelClass)
+    | !{labelText}
+    input(type='radio', checked=inputChecked, name=inputName, value=inputValue)
+    span.checkmark

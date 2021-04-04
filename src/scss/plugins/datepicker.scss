@@ -15,6 +15,11 @@
   margin-left: 5px;
 }
 
+.datepicker--pointer {
+  left: 50% !important;
+}
+
+
 .datepicker {
   border-radius: 22px;
   width: 320px !important;
@@ -59,7 +64,7 @@
   border-radius: 22px !important;
 }
 
-.datepicker--cell.-selected- {
+.datepicker--cell.-current- {
   color: #fff;
   border: none;
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;

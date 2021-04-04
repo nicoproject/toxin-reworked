@@ -66,22 +66,20 @@ section,
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   margin: 0 auto;
   min-height: 100vh;
 }
 
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  /*min-height: 100vh;*/
+  // display: flex;
+  // flex-direction: column;
 }
 
 .container {
-  width: 100%;
-  flex: 0 0 auto;
   position: relative;
+  width: 100%;
   margin: 0 auto;
 
   max-width: $desktopWidth;
@@ -99,12 +97,6 @@ section,
 .flex-between {
   display: flex;
   justify-content: space-between;
-}
-
-.column {
-  flex-direction: row;
-  margin-right: 1%;
-  width: 30%;
 }
 
 .rotate180 {

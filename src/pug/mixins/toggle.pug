@@ -1,0 +1,6 @@
+
+mixin toggle(inputName, inputValue, toggleLabel)
+  label.switch
+    input(type='checkbox' name=inputName value=inputValue)
+    span.slider.round
+    span.toggle-label !{toggleLabel}
