@@ -1,0 +1,53 @@
+extends ../layout/default-layout
+
+block variables
+  - var title = 'Toxin ReWorked: Room details page';
+  - var description = 'Toxin ReWorked: Room details page';
+  - var pageClass = 'room-details-page';
+
+block content
+  .room-gallery-wrapper
+    img(src='../images/content/rooms/room-photo-hero-1.jpg')
+    .room-photo-aside-wrapper
+      img(src='../images/content/rooms/room-photo-aside-1.jpg')
+      img(src='../images/content/rooms/room-photo-aside-2.jpg')
+
+  .container
+    .room-details-container
+      .room-details-content
+        .two-columns-container
+          .column
+            h3 Сведения о номере
+            .default-feature-container.feature-smile
+              span.feature-heading Комфорт
+              p.feature-description Шумопоглащающие стены
+            .default-feature-container.feature-city
+              span.feature-heading Удобство
+              p.feature-description Окно в каждой из спален        
+            .default-feature-container.feature-hot
+              span.feature-heading Уют
+              p.feature-description Номер оснащен камином        
+          .column
+            h3 Впечатления от  номера
+            #canvas-holder
+              canvas#myChart 
+
+        h3 Отзывы посетителей номера
+        include ../components/review.pug
+
+
+        .two-columns-container
+          .column
+            h3 Правила
+            ul.default-bullet-list
+              li.default-bullet Нельзя с питомцами 
+              li.default-bullet Без вечеринок и мероприятий 
+              li.default-bullet 
+                | Время прибытия — после 13:00,
+                br 
+                | а выезд до 12:00            
+          .column
+            h3 Отмена
+            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .room-details-sidebar
+        include ../components/forms/room-booking-form.pug
