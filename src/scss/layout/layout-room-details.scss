@@ -1,0 +1,53 @@
+// Room details
+.room-gallery-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+
+  img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.room-photo-hero-wrapper {
+
+}
+
+.room-photo-aside-wrapper {
+  img {
+    min-width: 100%;
+    min-height: 50%;
+  }
+}
+.room-photo-aside {
+}
+
+.room-details-container {
+  display: flex;
+  padding-top: 50px;
+}
+
+.room-details-content {
+  padding: 20px;
+
+  h3 {
+    font-family: Open Sans, Helvetica, Arial, sans-serif;
+    text-transform: none;
+    font-size: 19px;
+    padding-bottom: 10px;
+  }
+}
+
+.two-columns-container {
+  display: flex;
+
+  .column {
+    width: 49%;
+  }
+}
+
+.room-details-sidebar {
+  width: 420px;
+  padding: 20px;
+}

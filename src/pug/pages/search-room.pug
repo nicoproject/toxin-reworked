@@ -1,0 +1,64 @@
+extends ../layout/default-layout
+
+block variables
+  - var title = 'Toxin ReWorked: Search room page';
+  - var description = 'Toxin ReWorked: Search room page';
+  - var pageClass = 'search-room-page';
+
+  - var room = {}
+  - room.photos = ["../images/content/rooms/room_1_thumb.png","../images/content/rooms/room_1_thumb.png","../images/content/rooms/room_2_thumb.png"]
+  - room.number = "888"
+  - room.class = " люкс"
+  - room.price = "9 900"
+  - room.rating = "5" 
+  - room.reviews = "12"
+
+block content
+  .container
+    .search-page-wrapper
+      .sidebar.sidebar-room-search
+        h3 Даты пребывания в отеле
+        include ../components/dropdown-date
+        h3 Гости
+        include ../components/dropdown-guests
+        h3 Диапазон цены
+        input.js-range-slider(type="text", name="my_range", value="")
+        span.range-slider-hint Стоимость за сутки пребывания в номере
+        .house-rules
+          h3 Правила дома
+          +generateCheckbox("Можно курить", false)
+          +generateCheckbox("Можно с питомцами", true)
+          +generateCheckbox("Можно пригласить гостей<br>(до 10 человек) ", true)
+        .accessibility
+          h3  Доступность
+          include ../components/checkbox-rich
+        h3 Удобства номера
+        include ../components/dropdown-rooms
+        .expandable-button
+          h3 Дополнительные удобства
+        .expandable-checkbox-list-container
+          +generateCheckbox('Завтрак')
+          +generateCheckbox('Письменный стол')
+          +generateCheckbox('Стул для кормления')
+          +generateCheckbox('Кроватка')
+          +generateCheckbox('Шампунь')
+          +generateCheckbox('Телевизор')
+      .content
+        h2.search-room-result__title Номера, которые мы для вас подобрали
+        .content-room-search-container
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+          +renderRoomFound(room)
+
+        include ../components/pagination
+
+block script
