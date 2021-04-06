@@ -1,11 +1,48 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge');
+const path = require('path')
+
 
 const webpackConfiguration = require('../webpack.config');
 const environment = require('./environment');
 
 module.exports = merge(webpackConfiguration, {
   mode: 'development',
+  output: {
+    filename: 'js/[name].js',
+    path: environment.paths.output,
+    publicPath: './',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|gif|jpe?g|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: 'images/design/[name].[hash:6].[ext]',
+              publicPath: './',
+              limit: environment.limits.images,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: 'fonts/[name].[hash:6].[ext]',
+              publicPath: './',
+              limit: environment.limits.fonts,
+            },
+          },
+        ],
+      },
+    ],
+  },
 
   /* Manage source maps generation process */
   devtool: 'eval-source-map',

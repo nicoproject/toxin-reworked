@@ -24,10 +24,6 @@ module.exports = {
   entry: {
     app: path.resolve(environment.paths.source, 'js', 'app.js'),
   },
-  output: {
-    filename: 'js/[name].js',
-    path: environment.paths.output,
-  },
   module: {
     rules: [
       {
@@ -45,12 +41,12 @@ module.exports = {
             },
           },
           {
-            'loader': 'postcss-loader',
-            'options': {
-              'postcssOptions': {
-                'config': path.resolve('./postcss.config.js'),
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                config: path.resolve('./postcss.config.js'),
               },
-              'sourceMap': true,
+              sourceMap: true,
             },
           },
           {
@@ -65,32 +61,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader'],
-      },
-      {
-        test: /\.(png|gif|jpe?g|svg)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: 'images/design/[name].[hash:6].[ext]',
-              publicPath: '../',
-              limit: environment.limits.images,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              name: 'fonts/[name].[hash:6].[ext]',
-              publicPath: '../',
-              limit: environment.limits.fonts,
-            },
-          },
-        ],
       },
     ],
   },
