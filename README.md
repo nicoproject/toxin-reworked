@@ -8,16 +8,16 @@
 
 ### UI-kit:<br/>
 
-- [UI-kit](https://nicoproject.github.io/toxin-reworked/dist/ui-kit.html)
-- [cards](https://nicoproject.github.io/toxin-reworked/dist/cards.html)
+- [UI-kit](https://nicoproject.github.io/toxin-reworked/ui-kit.html)
+- [cards](https://nicoproject.github.io/toxin-reworked/cards.html)
 
 ### Страницы:<br/>
 
-- [landing page](https://nicoproject.github.io/toxin-reworked/dist/landing-page.html)
-- [search room](https://nicoproject.github.io/toxin-reworked/dist/search-room.html)
-- [room details](https://nicoproject.github.io/toxin-reworked/dist/room-details.html)
-- [sign-in](https://nicoproject.github.io/toxin-reworked/dist/sign-in.html)
-- [sign-up](https://nicoproject.github.io/toxin-reworked/dist/register.html)
+- [landing page](https://nicoproject.github.io/toxin-reworked/landing-page.html)
+- [search room](https://nicoproject.github.io/toxin-reworked/search-room.html)
+- [room details](https://nicoproject.github.io/toxin-reworked/room-details.html)
+- [sign-in](https://nicoproject.github.io/toxin-reworked/sign-in.html)
+- [sign-up](https://nicoproject.github.io/toxin-reworked/register.html)
 
 ---
 
@@ -37,6 +37,6 @@
 `npm run build` - сборка в режиме watch, перекомпилируется при изменении в графе зависимостей webpack<br/>
 `npm run production` - сборка в режиме production (_produciton mode_), результат сборки (минимизированный и объединенный код) сохраняется в папку _dist_<br/>
 `npm run lint` - проверка синтаксиса js-файлов с помощью [Eslint](https://eslint.org/)<br/>
-`npm run deploy` - копирует папку dist в ветку _gh-pages_ <br>https://nicoproject.github.io/toxin-reworked/dist/index.html<br/>
+`npm run deploy` - копирует папку dist в ветку _gh-pages_ <br>https://nicoproject.github.io/toxin-reworked/index.html<br/>
 
 ---
