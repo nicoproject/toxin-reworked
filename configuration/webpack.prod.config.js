@@ -1,12 +1,10 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge')
 const path = require('path')
-
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
 const webpackConfiguration = require('../webpack.config')
-
 const environment = require('./environment')
 
 module.exports = merge(webpackConfiguration, {
@@ -15,7 +13,6 @@ module.exports = merge(webpackConfiguration, {
   output: {
     filename: 'js/[name].js',
     path: environment.paths.output,
-    publicPath: './',
   },
   module: {
     rules: [
@@ -26,7 +23,7 @@ module.exports = merge(webpackConfiguration, {
             loader: 'url-loader',
             options: {
               name: 'images/design/[name].[hash:6].[ext]',
-              publicPath: '/dist/',
+              outputPath: 'images/',
               limit: environment.limits.images,
             },
           },
@@ -39,7 +36,7 @@ module.exports = merge(webpackConfiguration, {
             loader: 'url-loader',
             options: {
               name: 'fonts/[name].[hash:6].[ext]',
-              publicPath: '/dist/',
+              outputPath: '/fonts',
               limit: environment.limits.fonts,
             },
           },
