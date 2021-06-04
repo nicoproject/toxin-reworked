@@ -16,9 +16,51 @@ const { extendDefaultPlugins } = require('svgo')
 /* ENV const */
 const environment = require('./config/environment')
 const PAGES_DIR = `${environment.paths.source}\\pages\\`
-const PAGES = fs
-	.readdirSync(PAGES_DIR)
-	.filter((fileName) => fileName.endsWith('.pug'))
+// const PAGES = fs
+// 	.readdirSync(PAGES_DIR)
+// 	.filter((fileName) => fileName.endsWith('.pug'))
+
+const fetchFiles = async (targetPath) => {
+	const files = await fs.promises.readdir(targetPath)
+	const fetchedFiles = []
+
+	for (let file of files) {
+		try {
+			const filepath = path.join(targetPath, file)
+			const stats = await fs.promises.lstat(filepath)
+
+			if (stats.isFile() && file.slice(-4) === '.pug') {
+				fetchedFiles.push(filepath)
+			}
+
+			if (stats.isDirectory()) {
+				const childFiles = await fs.promises.readdir(filepath)
+				files.push(...childFiles.map((f) => path.join(file, f)))
+			}
+		} catch (err) {
+			console.error(err)
+		}
+	}
+
+	return fetchedFiles
+}
+
+const run = async () => {
+	try {
+		const files = await fetchFiles('src/pages')
+		console.log(files)
+	} catch (err) {
+		console.error(err)
+	}
+}
+
+let PAGES = run().then((value) => value)
+PAGES = Array.from(PAGES)
+
+setTimeout(()=> {
+	console.log('111111', typeof PAGES)
+	console.log('fetchedFiles', typeof PAGES)
+}, 1000)
 
 module.exports = {
 	entry: {

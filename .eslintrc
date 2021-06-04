@@ -1,5 +1,5 @@
 {
-	"extends": ["airbnb/base", "plugin:fsd/all"],
+	"extends": ["airbnb/base", "plugin:fsd/all", "prettier"],
 	"env": {
 		"node": true,
 		"jquery": true
