@@ -25,12 +25,18 @@ module.exports = {
 	entry: {
 		app: path.resolve(environment.paths.source, 'index.js'),
 	},
+	resolve: {
+		alias: {
+			src: path.resolve(__dirname, 'src/'),
+			node_modules: path.resolve(__dirname, 'node_modules/'),
+		},
+	},
 	module: {
 		rules: [
 			{
 				test: /\.pug$/,
 				use: ['pug-loader'],
-			}, 
+			},
 			{
 				test: /\.s[ac]ss$/i,
 				use: [

@@ -7,6 +7,8 @@ module.exports = {
 
     /* Path to built files directory */
     output: path.resolve(__dirname, '../dist/'),
+
+    node_modules: path.resolve(__dirname, '../node_modules/'),
   },
   server: {
     host: 'localhost',

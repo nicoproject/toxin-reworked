@@ -1,10 +1,10 @@
 import Chart from 'chart.js/auto'
-import './main.scss'
+import 'src/main.scss'
 
 /* Components */
-import './components/dropdown/dropdown'
-import './components/checkbox/checkbox'
-import './components/checkbox-expandable/checkbox-expandable'
+import 'src/components/dropdown/dropdown'
+import 'src/components/checkbox/checkbox'
+import 'src/components/checkbox-expandable/checkbox-expandable'
 
 require('air-datepicker')
 require('jquery-mask-plugin')

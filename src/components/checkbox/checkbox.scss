@@ -14,7 +14,7 @@
 }
 
 .default-checkbox:checked {
-  background: #ffffff url('../assets/images/design/input_checked.png') no-repeat 298px 18px;
+  background: #ffffff url('~src/assets/images/design/input_checked.png') no-repeat 298px 18px;
 }
 
 .default-label {
@@ -48,7 +48,7 @@
 /* checked */
 .default-label.checked:before {
   content: '';
-  background: url(../assets/images/design/input_checked.png) no-repeat 4px 3px;
+  background: url(~src/assets/images/design/input_checked.png) no-repeat 4px 3px;
   border: 1px solid $purple-color;
 }
 /* disabled */

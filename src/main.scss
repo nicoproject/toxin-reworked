@@ -1,57 +1,56 @@
 /* FSD Task 2 Frontend project */
 
 /* Core variables */
-@import './utils/utils-css/vars';
+@import '~src/utils/utils-css/vars';
 
 /* CSS Reset */
-@import './utils/utils-css/reset';
+@import '~src/utils/utils-css/reset';
 
 /* CSS print */
-@import './utils/utils-css/print';
+@import '~src/utils/utils-css/print';
 
 /* Fonts */
-@import './utils/utils-css/fonts';
+@import '~src/utils/utils-css/fonts';
 
 /* Mixins, helpers and functions */
-@import './utils/utils-css/mixins';
+@import '~src/utils/utils-css/mixins';
 
 /* Typography */
-@import './utils/utils-css/typo';
+@import '~src/utils/utils-css/typo';
 
 /* Layout grid styles */
-@import 'layout/layout';
-@import 'layout/layout-forms';
-@import 'layout/layout-sign-in';
-@import './pages/landing-page/landing-page';
-@import './pages/search-room/search-room';
-@import './pages/registration-page/registration-page';
-@import './pages/room-details/room-details';
+@import '~src/pages/default-layout/layout';
+@import '~src/pages/default-layout/layout-forms';
+@import '~src/pages/default-layout/layout-sign-in';
+@import '~src/pages/landing-page/landing-page';
+@import '~src/pages/search-room/search-room';
+@import '~src/pages/registration-page/registration-page';
+@import '~src/pages/room-details/room-details';
 
 /* Components */
-@import './components/header/header';
-@import './components/footer/footer';
-@import 'components/navigation';
-@import 'components/form-elements';
-@import 'components/input';
-@import '../components/input-masked/input-masked';
-@import 'components/dropdown';
-@import '../components/dropdown-date/dropdown-date';
-@import '../components/input-subscription/input-subscribtion';
-@import '../components/checkbox/checkbox';
-@import 'components/radiobutton';
-@import 'components/toggle';
-@import '../components/like/like';
-@import '../components//rate/rate';
-@import 'components/checkbox-expandable';
-@import '../components/features/features';
-@import '../components/checkbox-rich/checkbox-rich';
-@import '../components/review/review';
-@import '../components/buttons/buttons';
-@import '../components/pagination/pagination';
-@import '../components/bullet-list/bullet-list';
-@import '../components/card-room-preview/card-room-preview';
+@import '~src/components/header/header';
+@import '~src/components/footer/footer';
+@import '~src/components/navigation/navigation';
+@import '~src/components/input/input';
+@import '~src/components/input-masked/input-masked';
+@import '~src/components/dropdown/dropdown';
+@import '~src/components/dropdown-date/dropdown-date';
+@import '~src/components/input-subscription/input-subscribtion';
+@import '~src/components/checkbox/checkbox';
+@import '~src/components/radiobutton/radiobutton';
+@import '~src/components/toggle/toggle';
+@import '~src/components/like/like';
+@import '~src/components//rate/rate';
+@import '~src/components/checkbox-expandable/checkbox-expandable';
+@import '~src/components/features/features';
+@import '~src/components/checkbox-rich/checkbox-rich';
+@import '~src/components/review/review';
+@import '~src/components/buttons/buttons';
+@import '~src/components/pagination/pagination';
+@import '~src/components/bullet-list/bullet-list';
+@import '~src/components/card-room-preview/card-room-preview';
 
 /*Plugins */
-@import 'plugins/datepicker';
-@import 'plugins/rangeslider';
-@import 'plugins/bxslider';
+@import '~src/plugins/bxSlider/bxslider';
+@import '~src/plugins/datepicker/datepicker';
+@import '~src/plugins/rangeslider/rangeslider';
