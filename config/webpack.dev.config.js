@@ -11,7 +11,7 @@ module.exports = merge(webpackConfiguration, {
   output: {
     filename: 'js/[name].js',
     path: environment.paths.output,
-    publicPath: './',
+    publicPath: '../',
   },
   module: {
     rules: [
@@ -22,7 +22,7 @@ module.exports = merge(webpackConfiguration, {
             loader: 'url-loader',
             options: {
               name: 'images/design/[name].[hash:6].[ext]',
-              publicPath: './',
+              publicPath: '../',
               limit: environment.limits.images,
             },
           },
@@ -35,7 +35,7 @@ module.exports = merge(webpackConfiguration, {
             loader: 'url-loader',
             options: {
               name: 'fonts/[name].[hash:6].[ext]',
-              publicPath: './',
+              publicPath: '../',
               limit: environment.limits.fonts,
             },
           },

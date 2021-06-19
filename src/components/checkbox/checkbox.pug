@@ -1,3 +1,8 @@
+mixin generateCheckbox(text, isChecked)
+  label.default-label 
+    input.default-checkbox(type='checkbox', checked= isChecked)
+    span !{text}  
+
 +generateCheckbox('Можно курить')
 +generateCheckbox('Можно с питомцами', 'checked')
 +generateCheckbox('Можно пригласить гостей<br>(до 10 человек)', 'checked')

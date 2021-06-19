@@ -1,4 +1,4 @@
-extends ../layout/default-layout
+extends ../default-layout/default-layout
 
 block variables
   - var title = 'Toxin ReWorked: Cards page';
@@ -10,17 +10,17 @@ block content
     .cards-col
       //- Room search form
       h3 Rooms search form
-      include ../components/forms/rooms-search-form
+      include ../../components/card-room-search/card-room-search
       h3 Registration form
-      include ../components/forms/registration-form
+      include ../../components/card-registration/card-registration
 
     .cards-col
       h3 Room booking
-      include ../components/forms/room-booking-form
+      include ../../components/card-booking/card-booking
       h3 Sign-in form
-      include ../components/forms/sign-in-form
+      include ../../components/card-sign-in/card-sign-in
 
     .cards-col
       h3 Room cards
-      include ../components/room-card-preview
+      include ../../components/card-room-preview/card-room-preview
 

@@ -1,4 +1,4 @@
-extends ../layout/default-layout
+extends ../default-layout/default-layout
 
 block variables
   - var title = 'Toxin ReWorked: UI Kit';
@@ -14,17 +14,17 @@ block content
           h3 Text field
           +input("one-class two-class three-class","text", "default input")
           h3 Dropdown guests
-          include ../components/dropdown-guests
+          include ../../components/dropdown-guests/dropdown-guests
           h3 Masked input
-          include ../components/input-masked
+          include ../../components/input-masked/input-masked
           h3 Date Dropdown
           .flex-between
-            include ../components/dropdown-date
-            include ../components/dropdown-date
+            include ../../components/dropdown-date/dropdown-date
+            include ../../components/dropdown-date/dropdown-date
           h3 Email Subscription 
-          include ../components/input-subscription
+          include ../../components/input-subscription/input-subscription
           h3 Dropdown Rooms
-          include ../components/dropdown-rooms
+          include ../../components/dropdown-rooms/dropdown-rooms
           .expandable-button
             h3 Expandable Checkbox List
           .expandable-checkbox-list-container
@@ -35,37 +35,37 @@ block content
             +generateCheckbox('Телевизор')
             +generateCheckbox('Шампунь')
           h3 Features
-          include ../components/features
+          include ../../components/features/features
 
 
         //- Second column
         .form-col
           h3 Checkbox Buttons
-          include ../components/checkbox
+          include ../../components/checkbox/checkbox
           h3 Radio Buttons
           +createRadiobutton("choose-male", 'Мужчина', true, "radio-gender", "male")
           +createRadiobutton("choose-female", 'Женщина', false, "radio-gender", "female")
           h3 Toggle
           +toggle("", "", "Получать спецпредложения")
           h3 Like button
-          include ../components/like
+          include ../../components/like/like
           h3 Rate button
-          include ../components/rate
+          include ../../components/rate/rate
           h3  Rich Checkbox Buttons
-          include ../components/checkbox-rich
+          include ../../components/checkbox-rich/checkbox-rich
           h3 Reviews
-          include ../components/review
+          include ../../components/review/review
 
         //- Third column
         .form-col
           h3 Range slider
           input.js-range-slider(type="text", name="my_range", value="")
           h3 Buttons
-          include ../components/buttons
+          include ../../components/buttons/buttons
           h3 Pagination
-          include ../components/pagination
+          include ../../components/pagination/pagination
           h3 Bullet List
-          include ../components/bullet-list
+          include ../../components/bullet-list/bullet-list
 
 
 

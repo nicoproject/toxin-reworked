@@ -1,15 +1,15 @@
 import Chart from 'chart.js/auto'
-import '../main.scss'
+import './main.scss'
 
 /* Components */
-import './components/dropdown'
-import './components/checkbox'
-import './components/checkbox-expandable'
+import './components/dropdown/dropdown'
+import './components/checkbox/checkbox'
+import './components/checkbox-expandable/checkbox-expandable'
 
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
-require('../../node_modules/bxslider/src/js/jquery.bxslider.js')
+require('bxslider/src/js/jquery.bxslider')
 
 /* UI Kit */
 $('.input-masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
@@ -20,7 +20,7 @@ $('.date-dropdown')
 		multipleDatesSeparator: ' — ',
 		range: true,
 		clearButton: true,
-		//arrows
+		// arrows
 		nextHtml:
 			"<svg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z' fill='#BC9CFF'/></svg>",
 		prevHtml:
@@ -54,7 +54,7 @@ $('.bxslider').bxSlider({
 	prevText: '<i class="material-icons">keyboard_arrow_left</i>',
 })
 
-//Drawing Chart for Room Details Page
+// Drawing Chart for Room Details Page
 const el = document.getElementById('myChart')
 const gradientOrange = el.getContext('2d').createLinearGradient(0, 0, 0, 100)
 const gradientPurple = el.getContext('2d').createLinearGradient(0, 0, 0, 100)
