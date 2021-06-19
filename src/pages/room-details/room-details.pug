@@ -1,4 +1,10 @@
-extends ../layout/default-layout
+extends ../default-layout/default-layout
+
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+include ../../components/radiobutton/radiobutton
+include ../../components/toggle/toggle
+include ../../components/link/link
 
 block variables
   - var title = 'Toxin ReWorked: Room details page';
@@ -33,7 +39,7 @@ block content
               canvas#myChart 
 
         h3 Отзывы посетителей номера
-        include ../components/review.pug
+        include ../../components/review/review
 
 
         .two-columns-container
@@ -50,4 +56,4 @@ block content
             h3 Отмена
             p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
       .room-details-sidebar
-        include ../components/forms/room-booking-form.pug
+        include ../../components/card-booking/card-booking

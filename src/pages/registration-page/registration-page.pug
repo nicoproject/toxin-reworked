@@ -1,4 +1,10 @@
-extends ../layout/default-layout
+extends ../default-layout/default-layout
+
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+include ../../components/radiobutton/radiobutton
+include ../../components/toggle/toggle
+include ../../components/link/link
 
 block variables
   - var title = 'Toxin ReWorked: Register page';
@@ -8,4 +14,4 @@ block variables
 block content
   .sign-in-form-wrapper
     .container
-      include ../components/forms/registration-form
+      include ../../components/card-registration/card-registration

@@ -16,9 +16,14 @@ const { extendDefaultPlugins } = require('svgo')
 const environment = require('./config/environment')
 const PAGES_DIR = `${environment.paths.source}\\pages\\`
 const PAGES = [
-	'ui-kit/ui-kit.pug',
 	'cards-page/cards-page.pug',
 	'index/index.pug',
+	'landing-page/landing-page.pug',
+	'registration-page/registration-page.pug',
+	'room-details/room-details.pug',
+	'search-room/search-room.pug',
+	'sign-in-page/sign-in-page.pug',
+	'ui-kit/ui-kit.pug',
 ]
 
 module.exports = {

@@ -1,4 +1,10 @@
-extends ../layout/default-layout
+extends ../default-layout/default-layout
+
+include ../../components/input/input
+include ../../components/checkbox/checkbox
+include ../../components/radiobutton/radiobutton
+include ../../components/toggle/toggle
+include ../../components/link/link
 
 mixin renderRoomFound(room) 
   .room-card-thumbnail-container
@@ -50,9 +56,9 @@ block content
     .search-page-wrapper
       .sidebar.sidebar-room-search
         h3 Даты пребывания в отеле
-        include ../components/dropdown-date
+        include ../../components/dropdown-date/dropdown-date
         h3 Гости
-        include ../components/dropdown-guests
+        include ../../components/dropdown-guests/dropdown-guests
         h3 Диапазон цены
         input.js-range-slider(type="text", name="my_range", value="")
         span.range-slider-hint Стоимость за сутки пребывания в номере
@@ -63,9 +69,9 @@ block content
           +generateCheckbox("Можно пригласить гостей<br>(до 10 человек) ", true)
         .accessibility
           h3  Доступность
-          include ../components/checkbox-rich
+          include ../../components/checkbox-rich/checkbox-rich
         h3 Удобства номера
-        include ../components/dropdown-rooms
+        include ../../components/dropdown-rooms/dropdown-rooms
         .expandable-button
           h3 Дополнительные удобства
         .expandable-checkbox-list-container
@@ -91,6 +97,6 @@ block content
           +renderRoomFound(room)
           +renderRoomFound(room)
 
-        include ../components/pagination
+        include ../../components/pagination/pagination
 
 block script
