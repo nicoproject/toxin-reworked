@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const path = require('path')
 
 
-const webpackConfiguration = require('../webpack.config');
+const webpackConfiguration = require('./webpack.config');
 const environment = require('./environment');
 
 module.exports = merge(webpackConfiguration, {

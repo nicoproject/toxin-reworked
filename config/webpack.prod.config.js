@@ -4,7 +4,7 @@ const path = require('path')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 
-const webpackConfiguration = require('../webpack.config')
+const webpackConfiguration = require('./webpack.config')
 const environment = require('./environment')
 
 module.exports = merge(webpackConfiguration, {

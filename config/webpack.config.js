@@ -13,7 +13,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { extendDefaultPlugins } = require('svgo')
 
 /* ENV const */
-const environment = require('./config/environment')
+const environment = require('./environment')
 const PAGES_DIR = `${environment.paths.source}\\pages\\`
 const PAGES = [
 	'cards-page/cards-page.pug',
@@ -32,8 +32,8 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			src: path.resolve(__dirname, 'src/'),
-			node_modules: path.resolve(__dirname, 'node_modules/'),
+			src: path.resolve(__dirname, '../src/'),
+			node_modules: path.resolve(__dirname, '../node_modules/'),
 		},
 	},
 	module: {
