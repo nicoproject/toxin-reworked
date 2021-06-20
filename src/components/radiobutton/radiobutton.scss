@@ -1,9 +1,5 @@
-//----------------------------------
-//---------DEFAULT RADIOBUTTON---------
-//----------------------------------
 .default-radiobutton {
 }
-/* The container */
 .container-radio {
   display: inline-block;
   position: relative;
@@ -15,14 +11,12 @@
   line-height: 21px;
 }
 
-/* Hide the browser's default radio button */
 .container-radio input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-/* Create a custom radio button */
 .checkmark {
   position: absolute;
   top: 0;
@@ -34,7 +28,6 @@
   border-radius: 10px;
 }
 
-/* On mouse-over, add background */
 .container-radio:hover input ~ .checkmark {
   border: 1px solid #bc9cff;
 }
@@ -43,24 +36,20 @@
   display: block;
 }
 
-/* When the radio button is checked, add background */
 .container-radio input:checked ~ .checkmark {
   background-color: #fff;
 }
 
-/* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: '';
   position: absolute;
   display: none;
 }
 
-/* Show the indicator (dot/circle) when checked */
 .container-radio input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the indicator (dot/circle) */
 .container-radio .checkmark:after {
   top: 3px;
   left: 3px;

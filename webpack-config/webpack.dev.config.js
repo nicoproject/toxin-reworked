@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge');
 const path = require('path')
 
@@ -44,10 +43,8 @@ module.exports = merge(webpackConfiguration, {
     ],
   },
 
-  /* Manage source maps generation process */
   devtool: 'eval-source-map',
 
-  /* Development Server Configuration */
   devServer: {
     contentBase: environment.paths.output,
     watchContentBase: true,
@@ -63,13 +60,11 @@ module.exports = merge(webpackConfiguration, {
     ...environment.server,
   },
 
-  /* File watcher options */
   watchOptions: {
     aggregateTimeout: 300,
     poll: 300,
     ignored: /node_modules/,
   },
 
-  /* Additional plugins configuration */
   plugins: [],
 });

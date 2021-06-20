@@ -1,4 +1,3 @@
-//-------LAYOUT
 .form-elements {
   form {
     display: flex;
@@ -9,7 +8,6 @@
 .cards-page.container {
   display: flex;
 }
-// Cards page column
 .cards-col {
   width: 400px;
 }
@@ -20,7 +18,6 @@
   margin-right: 125px;
 }
 
-//-------GENERAL FORM STYLES--
 .form {
   position: relative;
   width: 380px;
@@ -54,7 +51,6 @@
   line-height: 40px;
 }
 
-//-------ROOMS-SEARCH--
 .form-rooms-search {
   max-width: 380px;
   margin-bottom: 22px;
@@ -82,7 +78,6 @@
   width: 155px;
 }
 
-//------REGISTRATION
 .form-registration {
   .form-title {
     margin: 40px 0 20px 0;
@@ -118,7 +113,6 @@
   }
 }
 
-//-------ROOM BOOKING
 .form-room-booking {
   margin-bottom: 25px;
 
@@ -269,7 +263,6 @@
   }
 }
 
-//------SIGN IN
 .form-sign-in {
   .form-title {
     margin: 40px 0 20px;

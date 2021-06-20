@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 const { merge } = require('webpack-merge')
 const path = require('path')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
@@ -44,10 +43,8 @@ module.exports = merge(webpackConfiguration, {
       },
     ],
   },
-  /* Manage source maps generation process. Refer to https://webpack.js.org/configuration/devtool/#production */
   devtool: false,
 
-  /* Optimization configuration */
   optimization: {
     minimize: true,
     minimizer: [
@@ -58,12 +55,10 @@ module.exports = merge(webpackConfiguration, {
     ],
   },
 
-  /* Performance treshold configuration values */
   performance: {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
 
-  /* Additional plugins configuration */
   plugins: [],
 })

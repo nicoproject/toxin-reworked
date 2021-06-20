@@ -1,6 +1,3 @@
-//----------------------------------
-//---------DEFAULT CHECKBOX---------
-//----------------------------------
 .default-checkbox {
   appearance: auto;
   display: none;
@@ -45,13 +42,11 @@
   vertical-align: top;
 }
 
-/* checked */
 .default-label.checked:before {
   content: '';
   background: url(~src/assets/images/design/input_checked.png) no-repeat 4px 3px;
   border: 1px solid $purple-color;
 }
-/* disabled */
 .default-checkbox:disabled + .default-label:before {
   background: #eee;
 }

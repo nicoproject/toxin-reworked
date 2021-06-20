@@ -1,24 +1,10 @@
-/* FSD Task 2 Frontend project */
-
-/* Core variables */
 @import '~src/utils/utils-css/vars';
-
-/* CSS Reset */
 @import '~src/utils/utils-css/reset';
-
-/* CSS print */
 @import '~src/utils/utils-css/print';
-
-/* Fonts */
 @import '~src/utils/utils-css/fonts';
-
-/* Mixins, helpers and functions */
 @import '~src/utils/utils-css/mixins';
-
-/* Typography */
 @import '~src/utils/utils-css/typo';
 
-/* Layout grid styles */
 @import '~src/pages/default-layout/layout';
 @import '~src/pages/default-layout/layout-forms';
 @import '~src/pages/default-layout/layout-sign-in';
@@ -27,7 +13,6 @@
 @import '~src/pages/registration-page/registration-page';
 @import '~src/pages/room-details/room-details';
 
-/* Components */
 @import '~src/components/header/header';
 @import '~src/components/footer/footer';
 @import '~src/components/navigation/navigation';
@@ -40,7 +25,7 @@
 @import '~src/components/radiobutton/radiobutton';
 @import '~src/components/toggle/toggle';
 @import '~src/components/like/like';
-@import '~src/components//rate/rate';
+@import '~src/components/rate/rate';
 @import '~src/components/checkbox-expandable/checkbox-expandable';
 @import '~src/components/features/features';
 @import '~src/components/checkbox-rich/checkbox-rich';
@@ -50,7 +35,6 @@
 @import '~src/components/bullet-list/bullet-list';
 @import '~src/components/card-room-preview/card-room-preview';
 
-/*Plugins */
 @import '~src/plugins/bxSlider/bxslider';
 @import '~src/plugins/datepicker/datepicker';
 @import '~src/plugins/rangeslider/rangeslider';
