@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { extendDefaultPlugins } = require('svgo')
 
 const environment = require('./environment')
-const PAGES_DIR = `${environment.paths.source}\\pages\\`
+const PAGES_DIR = `${environment.paths.source}/pages/`
 const PAGES = [
 	'cards-page/cards-page.pug',
 	'index/index.pug',
@@ -25,9 +25,18 @@ module.exports = {
 		app: path.resolve(environment.paths.source, 'index.js'),
 	},
 	resolve: {
+		extensions: ['.js', '.css', '.scss'],
 		alias: {
 			src: path.resolve(__dirname, '../src/'),
 			node_modules: path.resolve(__dirname, '../node_modules/'),
+			datepicker: path.resolve(
+				__dirname,
+				'../node_modules/air-datepicker/dist/css/datepicker.min.css',
+			),
+			rangeslider: path.resolve(
+				__dirname,
+				'../node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
+			),
 		},
 	},
 	module: {
@@ -63,6 +72,26 @@ module.exports = {
 					},
 				],
 			},
+			{ 
+				test: /\.css$/, 
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							postcssOptions: {
+								config: path.resolve('./postcss.config.js'),
+							},
+							sourceMap: true,
+						},
+					},
+				],			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,

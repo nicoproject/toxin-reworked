@@ -8,7 +8,7 @@ import 'src/components/checkbox-expandable/checkbox-expandable'
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
-require('bxslider/src/js/jquery.bxslider')
+require('bxslider')
 
 $('.input-masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
 
@@ -45,10 +45,6 @@ $('.js-range-slider').ionRangeSlider({
 	hide_min_max: true,
 })
 
-$('.bxslider').bxSlider({
-	nextText: '<i class="material-icons">keyboard_arrow_right</i>',
-	prevText: '<i class="material-icons">keyboard_arrow_left</i>',
-})
 
 const el = document.getElementById('myChart')
 const gradientOrange = el.getContext('2d').createLinearGradient(0, 0, 0, 100)
