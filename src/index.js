@@ -8,7 +8,6 @@ import 'src/components/checkbox-expandable/checkbox-expandable'
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
-require('bxslider')
 
 $('.input-masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
 
