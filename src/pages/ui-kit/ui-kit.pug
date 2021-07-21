@@ -1,6 +1,6 @@
 extends ../default-layout/default-layout
 
-include ../../components/input/input
+include ../../components/text-field/text-field
 include ../../components/checkbox/checkbox
 include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
@@ -16,7 +16,11 @@ block content
       form(action='', method='POST')
         .form-col
           h3 Text field
-          +input("one-class two-class three-class","text", "default input")
+          +textField({
+            classes: "one-class two-class three-class",
+            type: "text",
+            placeholder: "default input"
+          })
           h3 Dropdown guests
           include ../../components/dropdown-guests/dropdown-guests
           h3 Masked input

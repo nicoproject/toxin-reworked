@@ -11,13 +11,21 @@ form.form.form-room-booking
   .rooms-search-dates-container.flex-between
     .column
       h3 Прибытие
-      +input("masked date-input date-dropdown", "text", "ДД.ММ.ГГГГ" )
+      +textField({
+        classes: "masked date-input date-dropdown", 
+        type: "text", 
+        placeholder: "ДД.ММ.ГГГГ"
+      })
     .column
       h3 Выезд
-      +input("masked date-input date-dropdown", "text", "ДД.ММ.ГГГГ" )
+      +textField({
+        classes: "masked date-input date-dropdown", 
+        type: "text", 
+        placeholder: "ДД.ММ.ГГГГ"
+      })
   h3 Гости
   include ../dropdown-guests/dropdown-guests
-    
+
   .room-booking-summary
     .room-booking-summary__summary-row
       .column
@@ -39,5 +47,5 @@ form.form.form-room-booking
       span.total-price-label Итого
       span.total-price-amount 38 081 р
     .total-price-border-line
-  
+
   +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Забронировать")

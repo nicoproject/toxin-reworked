@@ -3,10 +3,18 @@ form.form.form-rooms-search
   .rooms-search-dates-container.flex-between
     .column
       h3 Прибытие
-      +input("masked date-input datepicker-here arrival", "text", "ДД.ММ.ГГГГ")
+      +textField({
+        classes: "masked date-input datepicker-here arrival",
+        type: "text",
+        placeholder: "ДД.ММ.ГГГГ"
+      })
     .column
       h3 Выезд
-      +input("masked date-input datepicker-here departure", "text", "ДД.ММ.ГГГГ")
+      +textField({
+        classes: "masked date-input datepicker-here departure",
+        type: "text",
+        placeholder: "ДД.ММ.ГГГГ"
+      })      
   h3 Гости
   include ../dropdown-guests/dropdown-guests
   +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Подобрать номер")
