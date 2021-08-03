@@ -1,20 +1,38 @@
 mixin textField(config)
-  -const blockClass = config.blockClass || 'text-field'
-  -const classes = config.classes || []
-  -const type = config.type || ''
-  -const placeholder = config.placeholder || ''
+  -const blockName = config.blockName || 'text-field'
+  -const blockElement = config.blockElement || ''
+  -const modificator = config.modificator || ''
+  -let type = config.type || 'text'
+  -let placeholder = config.placeholder || ''
 
-  -const concatenatedClasses = classes.join(' ')
+  -let elClass = ''
+  -let modClass = ''
+  -let concatenatedClasses = ''
 
-  //- - var concatenatedClasses = ''
-  //- each className, index in config.classes
-  //-   if index === config.classes.length - 1
-  //-     - concatenatedClasses = concatenatedClasses + config.blockClass + '__' + className
-  //-   else 
-  //-     - concatenatedClasses = concatenatedClasses + config.blockClass + '__' + className + ' '
 
-  //- -var players = {classes: ['first-name', 'first-name-alternative']}
-  //- -var concatenatedPlayers = players.classes.join(', ')
-  //- p Currently playing: #{concatenatedPlayers}
+  if blockElement !== ''
+    -elClass = `${blockName}__${blockElement}`
 
-  input(class=config.blockClass, class=concatenatedClasses, type=config.type, placeholder=config.placeholder)
+  if modificator !== ''
+    if elClass !== ''
+      -modClass = `${elClass}_${modificator}`
+    else
+      -modClass = `${blockName}_${modificator}`
+    -concatenatedClasses = `${blockName} ${modClass}`
+  else
+    -concatenatedClasses = `${blockName}`
+
+  if modificator === 'masked'
+    .text-field__wrapper-masked
+      input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+  else if modificator === 'email'
+    -placeholder = 'Email'
+    -type = 'email'
+    .text-field__wrapper-subscription
+      span.material-icons
+        | arrow_forward
+      input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+  else
+    input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+
+

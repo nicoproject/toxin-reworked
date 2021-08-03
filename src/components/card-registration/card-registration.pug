@@ -1,35 +1,35 @@
 form.form.form-registration
   h3.form-title Регистрация аккаунта 
   +textField({
-    classes: ["first-name", "first-name-alternative"],
-    type: "text",
-    placeholder: "Имя"
+    blockElement: 'first-name',
+    type: 'text',
+    placeholder: 'Имя'
   })
   +textField({
-    classes: "last-name",
-    type: "text",
-    placeholder: "Фамилия"
+    blockElement: 'last-name',
+    type: 'text',
+    placeholder: 'Фамилия'
   })
-  +createRadiobutton("", "Мужчина", true, "radio-gender", "male")
-  +createRadiobutton("sex-female", "Женщина", false, "radio-gender", "female")
+  +createRadiobutton('', 'Мужчина', true, 'radio-gender', 'male')
+  +createRadiobutton('sex-female', 'Женщина', false, 'radio-gender', 'female')
   h3 Дата рождения
   +textField({
-    classes: "masked date-dropdown birthday-date",
-    type: "text",
-    placeholder: "ДД.ММ.ГГГГ"
+    blockElement: ['masked date-dropdown', 'birthday-date'],
+    type: 'text',
+    placeholder: 'ДД.ММ.ГГГГ'
   })
   h3 Данные для входа в сервис
   +textField({
-    type: "email",
-    placeholder: "Email"
+    type: 'email',
+    placeholder: 'Email'
   })
   +textField({
-    classes: "password",
-    type: "password",
-    placeholder: "Пароль"
+    blockElement: 'password',
+    type: 'password',
+    placeholder: 'Пароль'
   })
-  +toggle("", "", "Получать спецпредложения")
-  +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Перейти к оплате")
+  +toggle('', '', 'Получать спецпредложения')
+  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Перейти к оплате')
   .aready-registered-container
     span.already-registered Уже есть аккаунт на Toxin 
-    +createLink("default-button__border signIn-button", "/mock_adress", "<span>Войти</span>")
+    +createLink('default-button__border signIn-button', '/mock_adress', '<span>Войти</span>')

@@ -12,14 +12,14 @@ form.form.form-room-booking
     .column
       h3 Прибытие
       +textField({
-        classes: "masked date-input date-dropdown", 
+        blockElements: ["masked", "date-input date-dropdown"], 
         type: "text", 
         placeholder: "ДД.ММ.ГГГГ"
       })
     .column
       h3 Выезд
       +textField({
-        classes: "masked date-input date-dropdown", 
+        blockElements: ["masked date-input", "date-dropdown"], 
         type: "text", 
         placeholder: "ДД.ММ.ГГГГ"
       })

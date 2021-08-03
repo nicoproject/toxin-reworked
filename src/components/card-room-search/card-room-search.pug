@@ -4,17 +4,17 @@ form.form.form-rooms-search
     .column
       h3 Прибытие
       +textField({
-        classes: "masked date-input datepicker-here arrival",
-        type: "text",
-        placeholder: "ДД.ММ.ГГГГ"
+        blockElement: 'masked date-input datepicker-here arrival',
+        type: 'text',
+        placeholder: 'ДД.ММ.ГГГГ'
       })
     .column
       h3 Выезд
       +textField({
-        classes: "masked date-input datepicker-here departure",
-        type: "text",
-        placeholder: "ДД.ММ.ГГГГ"
+        blockElement: 'masked date-input datepicker-here departure',
+        type: 'text',
+        placeholder: 'ДД.ММ.ГГГГ'
       })      
   h3 Гости
   include ../dropdown-guests/dropdown-guests
-  +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Подобрать номер")
+  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Подобрать номер')

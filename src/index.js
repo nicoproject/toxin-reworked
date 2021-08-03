@@ -9,7 +9,7 @@ require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
 
-$('.input-masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
+$('.text-field_masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
 
 $('.date-dropdown')
   .datepicker({

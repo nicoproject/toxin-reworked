@@ -17,20 +17,23 @@ block content
         .form-col
           h3 Text field
           +textField({
-            classes: "one-class two-class three-class",
-            type: "text",
-            placeholder: "default input"
+            type: 'text',
+            placeholder: 'default input'
           })
           h3 Dropdown guests
           include ../../components/dropdown-guests/dropdown-guests
           h3 Masked input
-          include ../../components/input-masked/input-masked
+          +textField({
+            modificator: 'masked',
+          })
           h3 Date Dropdown
           .flex-between
             include ../../components/dropdown-date/dropdown-date
             include ../../components/dropdown-date/dropdown-date
           h3 Email Subscription 
-          include ../../components/input-subscription/input-subscription
+          +textField({
+            modificator: 'email',
+          })
           h3 Dropdown Rooms
           include ../../components/dropdown-rooms/dropdown-rooms
           .expandable-button
@@ -50,10 +53,10 @@ block content
           h3 Checkbox Buttons
           include ../../components/checkbox/checkbox
           h3 Radio Buttons
-          +createRadiobutton("choose-male", 'Мужчина', true, "radio-gender", "male")
-          +createRadiobutton("choose-female", 'Женщина', false, "radio-gender", "female")
+          +createRadiobutton('choose-male', 'Мужчина', true, 'radio-gender', 'male')
+          +createRadiobutton('choose-female', 'Женщина', false, 'radio-gender', 'female')
           h3 Toggle
-          +toggle("", "", "Получать спецпредложения")
+          +toggle('', '', 'Получать спецпредложения')
           h3 Like button
           include ../../components/like/like
           h3 Rate button
@@ -65,7 +68,7 @@ block content
 
         .form-col
           h3 Range slider
-          input.js-range-slider(type="text", name="my_range", value="")
+          input.js-range-slider(type='text', name='my_range', value='')
           h3 Buttons
           include ../../components/buttons/buttons
           h3 Pagination

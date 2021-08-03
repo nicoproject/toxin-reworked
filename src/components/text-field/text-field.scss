@@ -28,8 +28,35 @@
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
 
-.defaul-input__arrow {
+.text-field__arrow {
   background: #ffffff url('~src/assets/images/design/expand_more.png') no-repeat
     298px 18px;
   padding: 13px 15px;
+}
+
+.text-field__wrapper_masked {
+  position: relative;
+  width: 320px;
+}
+
+.text-field_masked {
+  width: 320px;
+}
+
+.text-field__wrapper-subscription {
+  position: relative;
+  width: 267px;
+
+  .material-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-field {
+    width: 267px;
+  }
 }

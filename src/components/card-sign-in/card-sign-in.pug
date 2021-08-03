@@ -1,16 +1,15 @@
 form.form.form-sign-in
   h3.form-title Войти 
   +textField({
-    classes: "",
-    type: "email",
-    placeholder: "Email"
+    type: 'email',
+    placeholder: 'Email'
   })
   +textField({
-    classes: "password",
-    type: "password",
-    placeholder: "Пароль"
+    blockElement: 'password',
+    type: 'password',
+    placeholder: 'Пароль'
   })
-  +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Войти")
+  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Войти')
   .aready-registered-container
     span.already-registered Нет аккаунта на Toxin?  
-    +createLink("default-button__border create-account-button", "/mock_adress", "<span>Создать</span>")
+    +createLink('default-button__border create-account-button', '/mock_adress', '<span>Создать</span>')
