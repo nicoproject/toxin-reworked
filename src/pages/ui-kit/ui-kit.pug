@@ -4,6 +4,7 @@ include ../../components/text-field/text-field
 include ../../components/checkbox/checkbox
 include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
+include ../../components/bullet-list/bullet-list
 
 block variables
   - var title = 'Toxin ReWorked: UI Kit';
@@ -74,7 +75,11 @@ block content
           h3 Pagination
           include ../../components/pagination/pagination
           h3 Bullet List
-          include ../../components/bullet-list/bullet-list
+          +bullet-list([
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00 ',
+          ])
 
 
 
