@@ -1,9 +1,18 @@
+mixin buttons(config)
+  -const text = config.text || ''
+  -const link = config.link || '/mock-adress/'
+  -const modificator = config.modificator || ''
 
-a.default-button.default-button__gradient(href="#") Click me
-br
-a.default-button.default-button__border(href="#")
-  span Click me
-br
-a.default-button(href="#") Click me
-br
-a.default-button.default-button__gradient.default-button__arrow.button-payment(href="#") Перейти к оплате
+
+  if modificator === 'gradient'
+    a.default-button.default-button__gradient(href=`${link}`) 
+      | #{text}
+  else if modificator === 'border'
+    a.default-button.default-button__border(href=`${link}`)
+      span #{text}
+  else if modificator === 'payment'
+    a.default-button.default-button__gradient.default-button__arrow.button__payment(href=`${link}`)
+      | #{text}
+  else
+    a.default-button(href=`${link}`)
+      | #{text}

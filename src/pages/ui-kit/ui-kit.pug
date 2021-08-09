@@ -1,6 +1,7 @@
 extends ../default-layout/default-layout
 
 include ../../components/text-field/text-field
+include ../../components/buttons/buttons
 include ../../components/checkbox/checkbox
 include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
@@ -71,7 +72,21 @@ block content
           h3 Range slider
           input.js-range-slider(type='text', name='my_range', value='')
           h3 Buttons
-          include ../../components/buttons/buttons
+          +buttons({
+            text: 'Click me',
+            modificator: 'gradient',
+          })
+          +buttons({
+            text: 'Click me',
+            modificator: 'border',
+          })
+          +buttons({
+            text: 'Click me',
+          })
+          +buttons({
+            text: 'Перейти к оплате',
+            modificator: 'payment',
+          })
           h3 Pagination
           include ../../components/pagination/pagination
           h3 Bullet List
