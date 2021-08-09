@@ -1,0 +1,19 @@
+extends ../default-layout/default-layout
+
+include ../../components/text-field/text-field
+include ../../components/checkbox/checkbox
+include ../../components/radiobutton/radiobutton
+include ../../components/toggle/toggle
+include ../../components/link/link
+
+block variables
+  - var title = 'Toxin ReWorked: Landing page';
+  - var description = 'Toxin ReWorked: Landing page';
+  - var pageClass = 'landing-page';
+
+block content
+  .container
+    include ../../components/card-room-search/card-room-search
+
+
+block script

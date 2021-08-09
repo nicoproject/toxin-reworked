@@ -1,0 +1,81 @@
+.room-card-thumbnail-container {
+  width: 270px;
+  height: 257px;
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    background: transparent;
+    text-indent: -9999px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  .bx-wrapper .bx-pager,
+  .bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: 15px;
+    right: -105px;
+    width: 100%;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a:hover,
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:focus {
+    background: #fff;
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    text-indent: 0 !important;
+    color: #fff;
+  }
+
+  .bx-wrapper .bx-next,
+  .bx-wrapper .bx-prev {
+    background: none !important;
+  }
+
+  .bx-wrapper .bx-prev {
+    left: 0px;
+  }
+
+  .bx-wrapper .bx-next {
+    right: 0px;
+  }
+
+  .bx-wrapper {
+    box-shadow: none;
+    border: 0;
+    margin-bottom: 0;
+  }
+
+  .bxslider li img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .room-booking-header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .room-rating-container {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 8px auto 0;
+    color: $dark-shade-50;
+  }
+
+  .reivews-counter {
+    font-weight: bold;
+  }
+}

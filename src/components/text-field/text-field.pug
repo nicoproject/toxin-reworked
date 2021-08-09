@@ -1,0 +1,38 @@
+mixin textField(config)
+  -const blockName = config.blockName || 'text-field'
+  -const blockElement = config.blockElement || ''
+  -const modificator = config.modificator || ''
+  -let type = config.type || 'text'
+  -let placeholder = config.placeholder || ''
+
+  -let elClass = ''
+  -let modClass = ''
+  -let concatenatedClasses = ''
+
+
+  if blockElement !== ''
+    -elClass = `${blockName}__${blockElement}`
+
+  if modificator !== ''
+    if elClass !== ''
+      -modClass = `${elClass}_${modificator}`
+    else
+      -modClass = `${blockName}_${modificator}`
+    -concatenatedClasses = `${blockName} ${modClass}`
+  else
+    -concatenatedClasses = `${blockName}`
+
+  if modificator === 'masked'
+    .text-field__wrapper-masked
+      input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+  else if modificator === 'email'
+    -placeholder = 'Email'
+    -type = 'email'
+    .text-field__wrapper-subscription
+      span.material-icons
+        | arrow_forward
+      input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+  else
+    input(class=`${concatenatedClasses}`, type=`${type}`, placeholder=`${placeholder}`)
+
+

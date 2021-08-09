@@ -1,12 +1,7 @@
 {
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/babel"
-  ],
+  "extends": ["airbnb/base", "plugin:fsd/all", "prettier"],
   "env": {
     "node": true,
-    "jasmine": true,
     "jquery": true
   },
   "rules": {
@@ -21,13 +16,10 @@
     "prefer-template": 0,
     "import/no-amd": 0,
     "space-before-function-paren": 0,
-    "jsx-a11y/href-no-hash": "off",
-    "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }],
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "linebreak-style": "off",
     "semi": "off"
-
   },
   "globals": {
     "browser": false,

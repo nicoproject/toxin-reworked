@@ -1,0 +1,24 @@
+header.layout-header
+  .container
+    .header-content
+      .logo-container
+        a(href="../index/index.html")
+          img(src='../../../assets/images/content/logo.svg', alt='message')
+
+      .navigation
+        ul.main-menu
+          li
+            a(href='../ui-kit/ui-kit.html') UI Kit
+          li.has-submenu
+            a(href='../cards-page/cards-page.html') Cards
+          li
+            a(href='../landing-page/landing-page.html') Landing page
+          li
+            a(href='../room-details/room-details.html') Room details
+          li.has-submenu
+            a(href='../search-room/search-room.html') Search room
+
+
+        .header__account-buttons 
+          button.sign-in-button.standart-button__gradient(type='button', onclick="window.location.href='../sign-in-page/sign-in-page.html'") Войти
+          button.register-button.standart-button__gradient(type='button', onclick="window.location.href='../registration-page/registration-page.html'") Зарегистрироваться

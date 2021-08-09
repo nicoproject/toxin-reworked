@@ -1,0 +1,7 @@
+mixin bullet-list(items)
+  -const bullets = items || []
+  ul.bullet-list
+    each item in bullets
+      li.bullet-list__item
+        span.bullet-list__text
+        | #{item} 

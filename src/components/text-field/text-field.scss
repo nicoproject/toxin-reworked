@@ -1,0 +1,62 @@
+.text-field {
+  background: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  color: $dark-shade-75;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding: 12px 30px 12px 12px;
+  margin: 3px 0 15px 0;
+
+  display: block;
+  width: 100%;
+}
+
+.text-field::placeholder {
+  font-size: 14px;
+  color: $dark-shade-25;
+}
+
+.text-field:hover,
+.text-field:focus {
+  border: 1px solid rgba(31, 32, 65, 0.5);
+}
+
+.text-field__arrow {
+  background: #ffffff url('~src/assets/images/design/expand_more.png') no-repeat
+    298px 18px;
+  padding: 13px 15px;
+}
+
+.text-field__wrapper_masked {
+  position: relative;
+  width: 320px;
+}
+
+.text-field_masked {
+  width: 320px;
+}
+
+.text-field__wrapper-subscription {
+  position: relative;
+  width: 267px;
+
+  .material-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-field {
+    width: 267px;
+  }
+}

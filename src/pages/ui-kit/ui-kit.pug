@@ -1,0 +1,92 @@
+extends ../default-layout/default-layout
+
+include ../../components/text-field/text-field
+include ../../components/checkbox/checkbox
+include ../../components/radiobutton/radiobutton
+include ../../components/toggle/toggle
+include ../../components/bullet-list/bullet-list
+
+block variables
+  - var title = 'Toxin ReWorked: UI Kit';
+  - var description = 'UI Kit element page';
+  - var pageClass = 'ui-kit-page';
+
+block content
+  .container
+    .form-elements
+      form(action='', method='POST')
+        .form-col
+          h3 Text field
+          +textField({
+            type: 'text',
+            placeholder: 'default input'
+          })
+          h3 Dropdown guests
+          include ../../components/dropdown-guests/dropdown-guests
+          h3 Masked input
+          +textField({
+            modificator: 'masked',
+          })
+          h3 Date Dropdown
+          .flex-between
+            include ../../components/dropdown-date/dropdown-date
+            include ../../components/dropdown-date/dropdown-date
+          h3 Email Subscription 
+          +textField({
+            modificator: 'email',
+          })
+          h3 Dropdown Rooms
+          include ../../components/dropdown-rooms/dropdown-rooms
+          .expandable-button
+            h3 Expandable Checkbox List
+          .expandable-checkbox-list-container
+            +generateCheckbox('Завтрак', 'checked')
+            +generateCheckbox('Письменный стол', 'checked')
+            +generateCheckbox('Стул для кормления', 'checked')
+            +generateCheckbox('Кроватка', 'checked')
+            +generateCheckbox('Телевизор')
+            +generateCheckbox('Шампунь')
+          h3 Features
+          include ../../components/features/features
+
+
+        .form-col
+          h3 Checkbox Buttons
+          include ../../components/checkbox/checkbox
+          h3 Radio Buttons
+          +createRadiobutton('choose-male', 'Мужчина', true, 'radio-gender', 'male')
+          +createRadiobutton('choose-female', 'Женщина', false, 'radio-gender', 'female')
+          h3 Toggle
+          +toggle('', '', 'Получать спецпредложения')
+          h3 Like button
+          include ../../components/like/like
+          h3 Rate button
+          include ../../components/rate/rate
+          h3  Rich Checkbox Buttons
+          include ../../components/checkbox-rich/checkbox-rich
+          h3 Reviews
+          include ../../components/review/review
+
+        .form-col
+          h3 Range slider
+          input.js-range-slider(type='text', name='my_range', value='')
+          h3 Buttons
+          include ../../components/buttons/buttons
+          h3 Pagination
+          include ../../components/pagination/pagination
+          h3 Bullet List
+          +bullet-list([
+            'Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00, а выезд до 12:00 ',
+          ])
+
+
+
+block script
+  script(type='text/javascript').
+    const foo = true;
+    let bar = function() {};
+    if (foo) {
+    bar(1 + 5)
+    }
