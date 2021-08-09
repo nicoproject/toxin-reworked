@@ -1,3 +1,5 @@
+include ../../components/rate/rate
+
 .room-card-thumbnail-container
   ul.bxslider
     li 
@@ -14,17 +16,10 @@
       span.ruble  р 
       span.room-term в сутки 
   .room-rating-container
-    .rate-button-container
-      a.star-link(href="#")
-        i.material-icons star
-      a.star-link(href="#")
-        i.material-icons star
-      a.star-link(href="#")
-        i.material-icons star
-      a.star-link(href="#")
-        i.material-icons star
-      a.star-link(href="#")
-        i.material-icons star
+    +rate({
+      rating: 3
+    })
+
     .reivews-container
       span.reivews-counter 145
       span.reivews-label  Отзывов

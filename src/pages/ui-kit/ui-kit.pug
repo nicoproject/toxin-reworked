@@ -6,6 +6,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
 include ../../components/bullet-list/bullet-list
+include ../../components/rate/rate
 
 block variables
   - var title = 'Toxin ReWorked: UI Kit';
@@ -62,7 +63,12 @@ block content
           h3 Like button
           include ../../components/like/like
           h3 Rate button
-          include ../../components/rate/rate
+          +rate({
+            rating: 5
+          })
+          +rate({
+            rating: 4
+          })
           h3  Rich Checkbox Buttons
           include ../../components/checkbox-rich/checkbox-rich
           h3 Reviews

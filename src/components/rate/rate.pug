@@ -1,23 +1,11 @@
-.rate-button-container
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-br    
-.rate-button-container
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star
-  a.star-link(href="#")
-    i.material-icons star_border
+mixin rate(config)
+  -const rating = config.rating || 0
+
+  .rate
+    each val in [1, 2, 3, 4 ,5]
+      if val <= rating
+        a.rate__star(href='/mock-adress/')
+          i.material-icons star
+      else
+        a.rate__star(href='/mock-adress/')
+          i.material-icons star_border
