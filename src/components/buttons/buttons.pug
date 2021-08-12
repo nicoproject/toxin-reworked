@@ -10,8 +10,8 @@ mixin buttons(config)
   else if modificator === 'border'
     a.default-button.default-button__border(href=`${link}`)
       span #{text}
-  else if modificator === 'payment'
-    a.default-button.default-button__gradient.default-button__arrow.button__payment(href=`${link}`)
+  else if modificator === 'wide'
+    a.default-button.default-button__gradient.default-button__arrow.button__wide(href=`${link}`)
       | #{text}
   else
     a.default-button(href=`${link}`)

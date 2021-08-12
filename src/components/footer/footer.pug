@@ -1,3 +1,5 @@
+include ../../components/text-field/text-field
+
 footer.layout-footer
   .container
     .footer-menu-container
@@ -46,7 +48,9 @@ footer.layout-footer
       .footer-area.area-5
         h5 Подписка
         p.subscribe-text Получайте специальные предложения и новости сервиса
-        include ../input-subscription/input-subscription
+        +textField({
+          modificator: 'email',
+        })
 
     .footer-content
       .copyright-container 

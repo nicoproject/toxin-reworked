@@ -1,3 +1,5 @@
+include ../../components/buttons/buttons
+
 form.form.form-rooms-search
   h3.form-title Найдём номера под ваши пожелания 
   .rooms-search-dates-container.flex-between
@@ -17,4 +19,7 @@ form.form.form-rooms-search
       })      
   h3 Гости
   include ../dropdown-guests/dropdown-guests
-  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Подобрать номер')
+  +buttons({
+    text: 'Подобрать номер',
+    modificator: 'wide',
+  })

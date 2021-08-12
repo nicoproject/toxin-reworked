@@ -1,3 +1,5 @@
+include ../../components/buttons/buttons
+
 form.form.form-room-booking
   .room-booking-header
     .column
@@ -48,4 +50,7 @@ form.form.form-room-booking
       span.total-price-amount 38 081 р
     .total-price-border-line
 
-  +createLink("default-button__gradient default-button__arrow default-button__fullwidth", "/mock_adress", "Забронировать")
+  +buttons({
+    text: 'Забронировать',
+    modificator: 'wide',
+  })

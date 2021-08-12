@@ -1,3 +1,5 @@
+include ../../components/buttons/buttons
+
 form.form.form-sign-in
   h3.form-title Войти 
   +textField({
@@ -9,7 +11,10 @@ form.form.form-sign-in
     type: 'password',
     placeholder: 'Пароль'
   })
-  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Войти')
+  +buttons({
+    text: 'Войти',
+    modificator: 'wide',
+  })
   .aready-registered-container
     span.already-registered Нет аккаунта на Toxin?  
     +createLink('default-button__border create-account-button', '/mock_adress', '<span>Создать</span>')

@@ -1,3 +1,5 @@
+include ../../components/buttons/buttons
+
 form.form.form-registration
   h3.form-title Регистрация аккаунта 
   +textField({
@@ -29,7 +31,10 @@ form.form.form-registration
     placeholder: 'Пароль'
   })
   +toggle('', '', 'Получать спецпредложения')
-  +createLink('default-button__gradient default-button__arrow default-button__fullwidth', '/mock_adress', 'Перейти к оплате')
+  +buttons({
+    text: 'Перейти к оплате',
+    modificator: 'wide',
+  })
   .aready-registered-container
     span.already-registered Уже есть аккаунт на Toxin 
     +createLink('default-button__border signIn-button', '/mock_adress', '<span>Войти</span>')
