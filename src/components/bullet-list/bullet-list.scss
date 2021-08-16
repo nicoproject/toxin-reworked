@@ -1,20 +1,29 @@
-.default-bullet {
-  position: relative;
-  padding-left: 23px;
-  margin-bottom: 10px;
-}
-.default-bullet::before {
-  position: absolute;
-  left: 0;
-  top: 3px;
+.bullet-list {
+  margin: 0;
+  padding: 0;
   display: block;
+  max-width: 292px;
 
-  content: '\2022';
-  color: rgba(31, 32, 65, 0.25);
-  font-weight: 700;
-  width: 10px;
-  height: 10px;
+  &__item {
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+  }
 
-  font-size: 40px;
-  line-height: 12px;
+  &__item::before {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    display: block;
+
+    content: '\2022';
+    color: rgba(31, 32, 65, 0.25);
+    font-weight: 700;
+    width: 10px;
+    height: 10px;
+
+    font-size: 59px;
+    line-height: 12px;
+  }
 }
