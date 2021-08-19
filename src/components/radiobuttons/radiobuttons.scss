@@ -1,6 +1,4 @@
-.default-radiobutton {
-}
-.container-radio {
+.radiobuttons__label {
   display: inline-block;
   position: relative;
   padding-left: 30px;
@@ -11,13 +9,13 @@
   line-height: 21px;
 }
 
-.container-radio input {
+.radiobuttons__label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.checkmark {
+.radiobuttons__checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,29 +26,30 @@
   border-radius: 10px;
 }
 
-.container-radio:hover input ~ .checkmark {
-  border: 1px solid #bc9cff;
-}
 
-.container-radio input:hover ~ .checkmark:after {
-  display: block;
-}
-
-.container-radio input:checked ~ .checkmark {
-  background-color: #fff;
-}
-
-.checkmark:after {
+.radiobuttons__checkmark:after {
   content: '';
   position: absolute;
   display: none;
 }
 
-.container-radio input:checked ~ .checkmark:after {
+.radiobuttons__label:hover input ~ .radiobuttons__checkmark {
+  border: 1px solid #bc9cff;
+}
+
+.radiobuttons__label input:hover ~ .radiobuttons__checkmark:after {
   display: block;
 }
 
-.container-radio .checkmark:after {
+.radiobuttons__label input:checked ~ .radiobuttons__checkmark {
+  background-color: #fff;
+}
+
+.radiobuttons__label input:checked ~ .radiobuttons__checkmark:after {
+  display: block;
+}
+
+.radiobuttons__label .radiobuttons__checkmark:after {
   top: 3px;
   left: 3px;
   width: 12px;

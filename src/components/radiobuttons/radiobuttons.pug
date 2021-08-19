@@ -1,0 +1,9 @@
+mixin radiobuttons({items})
+  each item in items
+    -const labelText = item.labelText || 'Текст ярлыка'
+    -const name = item.name || 'radiobuttons'
+    -const value = item.value || '0'
+    label.radiobuttons__label
+      | #{labelText}
+      input(type='radio', checked=item.checked, name=`${name}`, value=`${value}`)
+      span.radiobuttons__checkmark(tabindex=0)

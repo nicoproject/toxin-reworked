@@ -3,7 +3,7 @@ extends ../default-layout/default-layout
 include ../../components/text-field/text-field
 include ../../components/buttons/buttons
 include ../../components/checkbox/checkbox
-include ../../components/radiobutton/radiobutton
+include ../../components/radiobuttons/radiobuttons
 include ../../components/toggle/toggle
 include ../../components/bullet-list/bullet-list
 include ../../components/rate/rate
@@ -69,8 +69,20 @@ block content
           h3 Checkbox Buttons
           include ../../components/checkbox/checkbox
           h3 Radio Buttons
-          +createRadiobutton('choose-male', 'Мужчина', true, 'radio-gender', 'male')
-          +createRadiobutton('choose-female', 'Женщина', false, 'radio-gender', 'female')
+          +radiobuttons({items: [
+              {
+                labelText: 'Мужчина',
+                checked: true,
+                name: 'gender',
+                value: 'male'
+              },
+              {
+                labelText: 'Женщина',
+                name: 'gender',
+                value: 'female'
+              },
+            ]
+          })
           h3 Toggle
           +toggle('', '', 'Получать спецпредложения')
           h3 Like button
