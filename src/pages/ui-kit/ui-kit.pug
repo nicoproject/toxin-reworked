@@ -7,6 +7,8 @@ include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
 include ../../components/bullet-list/bullet-list
 include ../../components/rate/rate
+include ../../components/features/features
+
 
 block variables
   - var title = 'Toxin ReWorked: UI Kit';
@@ -49,8 +51,19 @@ block content
             +generateCheckbox('Телевизор')
             +generateCheckbox('Шампунь')
           h3 Features
-          include ../../components/features/features
-
+          +features({items: [
+            {
+              heading: 'Комфорт',
+              description: 'Шумопоглащающие стены',
+              icon: 'smile'
+            },
+            {
+              heading: 'Удобство',
+              description: 'Окно в каждой из спален',
+              icon: 'city'
+            },
+            ]
+          })
 
         .form-col
           h3 Checkbox Buttons

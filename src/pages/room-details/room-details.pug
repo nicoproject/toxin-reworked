@@ -5,6 +5,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radiobutton/radiobutton
 include ../../components/toggle/toggle
 include ../../components/link/link
+include ../../components/features/features
 
 block variables
   - var title = 'Toxin ReWorked: Room details page';
@@ -24,15 +25,24 @@ block content
         .two-columns-container
           .column
             h3 Сведения о номере
-            .default-feature-container.feature-smile
-              span.feature-heading Комфорт
-              p.feature-description Шумопоглащающие стены
-            .default-feature-container.feature-city
-              span.feature-heading Удобство
-              p.feature-description Окно в каждой из спален
-            .default-feature-container.feature-hot
-              span.feature-heading Уют
-              p.feature-description Номер оснащен камином
+            +features({items: [
+              {
+                heading: 'Комфорт',
+                description: 'Шумопоглащающие стены',
+                icon: 'smile'
+              },
+              {
+                heading: 'Удобство',
+                description: 'Окно в каждой из спален',
+                icon: 'city'
+              },
+              {
+                heading: 'Уют',
+                description: 'Номер оснащен камином',
+                icon: 'hot'
+              },
+              ]
+            })
           .column
             h3 Впечатления от  номера
             #canvas-holder

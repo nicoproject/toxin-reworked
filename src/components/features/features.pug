@@ -1,6 +1,11 @@
-.default-feature-container.feature-smile
-  span.feature-heading Комфорт
-  p.feature-description Шумопоглащающие стены
-.default-feature-container.feature-city
-  span.feature-heading Удобство
-  p.feature-description Окно в каждой из спален
+mixin features({items})
+  each item in items
+    -const heading = item.heading || 'Заголовок'
+    -const description = item.description || 'Описание'
+    -const icon = item.icon || 'smile'
+      .features__container
+        div(class=`features__icon features__icon_${icon}`)
+        span.features__heading
+          | #{heading}
+        p.features__description
+          | #{description}
