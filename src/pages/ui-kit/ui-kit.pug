@@ -8,6 +8,8 @@ include ../../components/toggle/toggle
 include ../../components/bullet-list/bullet-list
 include ../../components/rate/rate
 include ../../components/features/features
+include ../../components/like-button/like-button
+include ../../components/review/review
 
 
 block variables
@@ -86,7 +88,7 @@ block content
           h3 Toggle
           +toggle('', '', 'Получать спецпредложения')
           h3 Like button
-          include ../../components/like/like
+
           h3 Rate button
           +rate({
             rating: 5
@@ -97,7 +99,14 @@ block content
           h3  Rich Checkbox Buttons
           include ../../components/checkbox-rich/checkbox-rich
           h3 Reviews
-          include ../../components/review/review
+          +review({
+            imgSrc: '../../assets/images/content/avatar_review.png',
+            likeCount: 5,
+            likeStatus: true,
+            author: 'Мурад Сарафанов',
+            date: '5 дней назад',
+            content: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей',
+          })
 
         .form-col
           h3 Range slider

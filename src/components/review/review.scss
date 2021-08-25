@@ -1,22 +1,25 @@
-.default-review-container {
+.review {
   display: flex;
+  margin-bottom: 20px;
 }
 
-.review-photo-likes-container {
+.review__photolikes {
   min-width: 48px;
   text-align: center;
   margin-right: 10px;
 }
 
-.review-avatar {
+.review__avatar {
   margin-bottom: 12px;
 }
 
-.review-author {
+.review__author {
   display: block;
   font-weight: bold;
 }
 
-.review-content {
-  line-height: 171%;
+.review__content {
+  margin-top: 10px;
+  line-height: 24px;
+  font-size: 14px;
 }

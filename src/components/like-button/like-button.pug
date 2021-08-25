@@ -1,0 +1,13 @@
+mixin like-button(config)
+  -const count = config.count || 0
+  -const status = config.status || false
+  if !status
+    span.like-button
+      i.material-icons favorite_border
+      span.like-button__counter
+        | #{count}
+  else
+    span.like-button_liked
+      i.material-icons favorite
+      span.like-button__counter
+        | #{count}

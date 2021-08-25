@@ -1,22 +1,34 @@
-.default-review-container
-  .review-photo-likes-container
-    img.review-avatar(src="../../assets/images/content/avatar_review.png", alt="avatar_review")
-    span.like-button_hovered
-      i.material-icons favorite
-      span.like-button__counter 12
-  .review-content-container
-    span.review-author Мурад Сарафанов
-    span.review-date 5 дней назад
-    p.review-content
-      | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-.default-review-container
-  .review-photo-likes-container
-    img.review-avatar(src="../../assets/images/content/avatar_review.png", alt="avatar_review")
-    span.like-button_hovered
-      i.material-icons favorite
-      span.like-button__counter 12
-  .review-content-container
-    span.review-author Патрисия Стеклышкова
-    span.review-date Неделю назад
-    p.review-content
-      | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплиментОбслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+mixin review(config)
+  -const imgSrc = config.imgSrc || '../../assets/images/content/avatar_review.png'
+  -const imgAlt = config.imgAlt || 'review_avatar'
+  -const likeCount = config.likeCount || 0
+  -const likeStatus = config.likeStatus || false
+  -const author = config.author || 'review_author'
+  -const date = config.date || 'review_date'
+  -const content = config.content || 'review_content'
+  .review
+    .review__photolikes
+      img.review__avatar(src=`${imgSrc}`, alt=`${imgAlt}`)
+      +like-button({
+        count: likeCount,
+        status: likeStatus,
+      })
+    .review__content-container
+      span.review__author 
+        | #{author}
+      span.review__date
+        | #{date}
+      p.review__content
+        | #{content}
+      //- | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+//- .default-review-container
+//-   .review-photo-likes-container
+//-     img.review-avatar(src="../../assets/images/content/avatar_review.png", alt="avatar_review")
+//-     span.like-button_hovered
+//-       i.material-icons favorite
+//-       span.like-button__counter 12
+//-   .review-content-container
+//-     span.review-author Патрисия Стеклышкова
+//-     span.review-date Неделю назад
+//-     p.review-content
+//-       | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплиментОбслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
