@@ -57,9 +57,9 @@ block content
         span.range-slider-hint Стоимость за сутки пребывания в номере
         .house-rules
           h3 Правила дома
-          +generateCheckbox("Можно курить", false)
-          +generateCheckbox("Можно с питомцами", true)
-          +generateCheckbox("Можно пригласить гостей (до 10 человек) ", true)
+          +checkbox("Можно курить", false)
+          +checkbox("Можно с питомцами", true)
+          +checkbox("Можно пригласить гостей (до 10 человек) ", true)
         .accessibility
           h3  Доступность
           include ../../components/checkbox-rich/checkbox-rich
@@ -68,12 +68,12 @@ block content
         .expandable-button
           h3 Дополнительные удобства
         .expandable-checkbox-list-container
-          +generateCheckbox('Завтрак')
-          +generateCheckbox('Письменный стол')
-          +generateCheckbox('Стул для кормления')
-          +generateCheckbox('Кроватка')
-          +generateCheckbox('Шампунь')
-          +generateCheckbox('Телевизор')
+          +checkbox('Завтрак')
+          +checkbox('Письменный стол')
+          +checkbox('Стул для кормления')
+          +checkbox('Кроватка')
+          +checkbox('Шампунь')
+          +checkbox('Телевизор')
       .content
         h2.search-room-result__title Номера, которые мы для вас подобрали
         .content-room-search-container

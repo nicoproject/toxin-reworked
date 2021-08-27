@@ -1,6 +1,6 @@
 
 mixin toggle(inputName, inputValue, toggleLabel)
-  label.switch
+  label.checkbox__switch
     input(type='checkbox' name=inputName value=inputValue)
-    span.slider.round
-    span.toggle-label !{toggleLabel}
+    span.checkbox__slider
+    span.checkbox__toggle-label !{toggleLabel}

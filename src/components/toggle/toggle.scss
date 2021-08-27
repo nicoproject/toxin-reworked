@@ -1,63 +1,54 @@
-.switch {
-  position: relative;
-  display: flex;
-  width: 40px;
-  height: 20px;
-  margin-right: 10px;
-}
+// .checkbox__switch {
+//   position: relative;
+//   display: flex;
+//   width: 40px;
+//   height: 20px;
+//   margin-right: 10px;
 
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+//   input {
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+//   }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #fff;
-  transition: transform 0.4s;
-  border: 1px solid #ccc;
-}
+//   input:checked + .checkbox__slider {
+//     border: 1px solid $purple-color;
+//   }
 
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 12px;
-  width: 12px;
-  left: 4px;
-  bottom: 3px;
-  background: #ccc;
-  transition: transform 0.4s;
-}
+//   input:checked + .checkbox__slider:before {
+//     transform: translateX(18px);
+//     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+//   }
+// }
 
-input:checked + .slider {
-  border: 1px solid $purple-color;
-}
+// .checkbox__slider {
+//   position: absolute;
+//   cursor: pointer;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: #fff;
+//   transition: transform 0.4s;
+//   border: 1px solid #ccc;
+//   border-radius: 10px;
 
-input:focus + .slider {
-}
+//   &:before {
+//     position: absolute;
+//     content: '';
+//     height: 12px;
+//     width: 12px;
+//     left: 4px;
+//     bottom: 3px;
+//     background: #ccc;
+//     transition: transform 0.4s;
+//     border-radius: 10px;
+//   }
+// }
 
-input:checked + .slider:before {
-  transform: translateX(18px);
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-}
-
-.slider.round {
-  border-radius: 10px;
-}
-
-.slider.round:before {
-  border-radius: 10px;
-}
-
-.toggle-label {
-  white-space: nowrap;
-  padding-left: 50px;
-  cursor: pointer;
-  line-height: 21px;
-}
+// .checkbox__toggle-label {
+//   white-space: nowrap;
+//   padding-left: 50px;
+//   cursor: pointer;
+//   line-height: 21px;
+// }

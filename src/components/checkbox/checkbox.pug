@@ -1,4 +1,25 @@
-mixin generateCheckbox(text, isChecked)
-  label.default-label 
-    input.default-checkbox(type='checkbox', checked= isChecked)
-    span !{text}  
+mixin checkbox(config)
+  -const type = config.type || 'default'
+  -const title = config.title || 'checkbox buttons'
+  -const items = config.items || []
+  if type === 'default'
+    h3 #{title}
+    each item in items
+      label.checkbox__label
+        input.checkbox(type='checkbox', checked=item.isChecked )
+        span #{item.text}  
+  else if type === 'toggle'
+    h3 #{title}
+    each item in items
+      label.checkbox__toggle
+        input.checkbox__toggle-input(type='checkbox' name=`${item.toggleName}` value=`${item.toggleValue}` checked=item.isChecked)
+        span.checkbox__toggle-slider
+        span.checkbox__toggle-label #{item.text}
+  else if type === 'expandable'
+    .checkbox__expandable-title
+      h3 #{title}
+    .checkbox__expandable-list-container
+      each item in items
+        label.checkbox__label
+          input.checkbox(type='checkbox', checked=item.isChecked )
+          span #{item.text}

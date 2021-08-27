@@ -43,15 +43,33 @@ block content
           })
           h3 Dropdown Rooms
           include ../../components/dropdown-rooms/dropdown-rooms
-          .expandable-button
-            h3 Expandable Checkbox List
-          .expandable-checkbox-list-container
-            +generateCheckbox('Завтрак', 'checked')
-            +generateCheckbox('Письменный стол', 'checked')
-            +generateCheckbox('Стул для кормления', 'checked')
-            +generateCheckbox('Кроватка', 'checked')
-            +generateCheckbox('Телевизор')
-            +generateCheckbox('Шампунь')
+          +checkbox({
+            type: 'expandable',
+            title: 'expandable checkbox buttons',
+            items: [
+              {
+              text: 'Завтрак',
+              },
+              {
+              text: 'Письменный стол',
+              },
+              {
+              text: 'Стул для кормления',
+              },
+              {
+              text: 'Кроватка',
+              isChecked: true,
+              },
+              {
+              text: 'Телевизор',
+              isChecked: true,
+              },
+              {
+              text: 'Шампунь',
+              isChecked: true,
+              },
+            ]
+          })
           h3 Features
           +features({items: [
             {
@@ -68,25 +86,58 @@ block content
           })
 
         .form-col
-          h3 Checkbox Buttons
-          include ../../components/checkbox/checkbox
-          h3 Radio Buttons
-          +radiobuttons({items: [
+          +checkbox({
+            items: [
               {
-                labelText: 'Мужчина',
-                checked: true,
-                name: 'gender',
-                value: 'male'
+              text: 'Завтрак',
               },
               {
-                labelText: 'Женщина',
-                name: 'gender',
-                value: 'female'
+              text: 'Письменный стол',
+              },
+              {
+              text: 'Стул для кормления',
+              },
+              {
+              text: 'Кроватка',
+              isChecked: true,
+              },
+              {
+              text: 'Телевизор',
+              isChecked: true,
+              },
+              {
+              text: 'Шампунь',
+              isChecked: true,
               },
             ]
           })
-          h3 Toggle
-          +toggle('', '', 'Получать спецпредложения')
+          h3 Radio Buttons
+          +radiobuttons({items: [
+            {
+              labelText: 'Мужчина',
+              checked: true,
+              name: 'gender',
+              value: 'male'
+            },
+            {
+              labelText: 'Женщина',
+              name: 'gender',
+              value: 'female'
+            },
+            ]
+          })
+          +checkbox({
+            type: 'toggle',
+            title: 'Toggle',
+            items: [
+              {
+                text: 'Получать спецпредложения',
+                isChecked: true,
+                toggleName: 'toggle',
+                toggleValue: 'receive-ads',
+              },
+            ]
+          })
           h3 Like button
 
           h3 Rate button

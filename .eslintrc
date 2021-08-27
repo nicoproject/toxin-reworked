@@ -19,7 +19,8 @@
     "import/no-unresolved": 0,
     "import/extensions": 0,
     "linebreak-style": "off",
-    "semi": "off"
+    "semi": "off",
+    "no-underscore-dangle": "off"
   },
   "globals": {
     "browser": false,
