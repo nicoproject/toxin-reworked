@@ -6,13 +6,13 @@ mixin checkbox(config)
     h3 #{title}
     each item in items
       label.checkbox__label
-        input.checkbox(type='checkbox', checked=item.isChecked )
+        input.checkbox(type='checkbox', name=`${item.checkboxName}`, value=`${item.checkboxValue}`, checked=item.isChecked)
         span #{item.text}  
   else if type === 'toggle'
     h3 #{title}
     each item in items
       label.checkbox__toggle
-        input.checkbox__toggle-input(type='checkbox' name=`${item.toggleName}` value=`${item.toggleValue}` checked=item.isChecked)
+        input.checkbox__toggle-input(type='checkbox', name=`${item.toggleName}`, value=`${item.toggleValue}`, checked=item.isChecked)
         span.checkbox__toggle-slider
         span.checkbox__toggle-label #{item.text}
   else if type === 'expandable'
@@ -21,5 +21,14 @@ mixin checkbox(config)
     .checkbox__expandable-list-container
       each item in items
         label.checkbox__label
-          input.checkbox(type='checkbox', checked=item.isChecked )
+          input.checkbox(type='checkbox', name=`${item.expandableName}`, value=`${item.expandableValue}`, checked=item.isChecked)
           span #{item.text}
+  else if type === 'rich'
+    h3 #{title}
+    each item in items
+      .checkbox__rich-container
+        label.checkbox__label
+          input.checkbox(type='checkbox', name=`${item.richName}`, value=`${item.richValue}`, checked=item.isChecked)
+          span #{item.title}
+          p.checkbox__rich-description
+            | #{item.text}

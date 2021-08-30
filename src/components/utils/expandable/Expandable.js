@@ -1,7 +1,6 @@
 class Expandable {
   constructor() {
-    this.expandablesCheckboxes = this._searchExpandables()
-    this._init()
+    this._searchExpandables()
   }
 
   _searchExpandables() {
@@ -11,13 +10,11 @@ class Expandable {
   }
 
   _handleExpandableCheckbox() {
-    // console.log(this)
-    console.log($(this).next('.checkbox__expandable-list-container'))
     $(this).toggleClass('checkbox__expandable-title_arrow-up')
     $(this).next('.checkbox__expandable-list-container').slideToggle()
   }
 
-  _init() {
+  init() {
     this.expandablesCheckboxes.forEach((expandableCheckboxTitle) =>
       $(expandableCheckboxTitle).on('click', this._handleExpandableCheckbox),
     )

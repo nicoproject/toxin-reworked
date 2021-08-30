@@ -1,7 +1,7 @@
 class Checkbox {
   constructor(checkbox) {
     this.checkbox = $(checkbox)
-    this._init()
+    this.init()
   }
 
   _toggleCheck() {
@@ -40,7 +40,7 @@ class Checkbox {
     this.checkbox.on('click', this._handlerClick)
   }
 
-  _init() {
+  init() {
     this._bindHandlers()
     this._addEventHandlers()
     this._setupCheked()

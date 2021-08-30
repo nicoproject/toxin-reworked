@@ -3,7 +3,6 @@ extends ../default-layout/default-layout
 include ../../components/text-field/text-field
 include ../../components/checkbox/checkbox
 include ../../components/radiobuttons/radiobuttons
-include ../../components/toggle/toggle
 include ../../components/link/link
 include ../../components/rate/rate
 
@@ -61,19 +60,51 @@ block content
           +checkbox("Можно с питомцами", true)
           +checkbox("Можно пригласить гостей (до 10 человек) ", true)
         .accessibility
-          h3  Доступность
-          include ../../components/checkbox-rich/checkbox-rich
+          +checkbox({
+            type: 'rich',
+            title: 'Rich Checkbox Buttons',
+            items: [
+              {
+                title: 'Широкий коридор',
+                text: 'Ширина коридоров в номере не менее 91 см.',
+                isChecked: true
+              },
+              {
+                title: 'Помощник для инвалидов',
+                text: 'На 1 этаже вас встретит специалист и проводит до номера.'
+              },
+              
+            ]
+          })
         h3 Удобства номера
         include ../../components/dropdown-rooms/dropdown-rooms
-        .expandable-button
-          h3 Дополнительные удобства
-        .expandable-checkbox-list-container
-          +checkbox('Завтрак')
-          +checkbox('Письменный стол')
-          +checkbox('Стул для кормления')
-          +checkbox('Кроватка')
-          +checkbox('Шампунь')
-          +checkbox('Телевизор')
+        +checkbox({
+          type: 'expandable',
+          title: 'Дополнительные удобства',
+          items: [
+            {
+            text: 'Завтрак',
+            },
+            {
+            text: 'Письменный стол',
+            },
+            {
+            text: 'Стул для кормления',
+            },
+            {
+            text: 'Кроватка',
+            isChecked: true,
+            },
+            {
+            text: 'Телевизор',
+            isChecked: true,
+            },
+            {
+            text: 'Шампунь',
+            isChecked: true,
+            },
+          ]
+      })
       .content
         h2.search-room-result__title Номера, которые мы для вас подобрали
         .content-room-search-container

@@ -4,7 +4,6 @@ include ../../components/text-field/text-field
 include ../../components/buttons/buttons
 include ../../components/checkbox/checkbox
 include ../../components/radiobuttons/radiobuttons
-include ../../components/toggle/toggle
 include ../../components/bullet-list/bullet-list
 include ../../components/rate/rate
 include ../../components/features/features
@@ -147,8 +146,22 @@ block content
           +rate({
             rating: 4
           })
-          h3  Rich Checkbox Buttons
-          include ../../components/checkbox-rich/checkbox-rich
+          +checkbox({
+            type: 'rich',
+            title: 'Rich Checkbox Buttons',
+            items: [
+              {
+                title: 'Широкий коридор',
+                text: 'Ширина коридоров в номере не менее 91 см.',
+                isChecked: true
+              },
+              {
+                title: 'Помощник для инвалидов',
+                text: 'На 1 этаже вас встретит специалист и проводит до номера.'
+              },
+              
+            ]
+          })
           h3 Reviews
           +review({
             imgSrc: '../../assets/images/content/avatar_review.png',

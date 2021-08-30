@@ -1,4 +1,4 @@
-import Expandable from './expandable'
+import Expandable from './Expandable'
 
 const findExpandales = new Expandable()
-$(window).on('load', findExpandales._init)
+findExpandales.init()

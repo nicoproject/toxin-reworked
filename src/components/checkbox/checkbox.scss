@@ -10,7 +10,8 @@
   vertical-align: middle;
 }
 
-.checkbox__label {
+.checkbox__label,
+.checkbox__expandable-label {
   color: $dark-shade-50;
   cursor: default;
   font-weight: normal;
@@ -147,4 +148,23 @@
 
 .checkbox__expandable-list-container {
   display: none;
+}
+
+.checkbox__rich-container {
+  .checkbox__label {
+    color: $dark-shade-75;
+    line-height: 129%;
+    padding: 5px 0 3px 0;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.checkbox__rich-description {
+  padding-left: 30px;
+  line-height: 117%;
+  font-size: 12px;
+  color: $dark-shade-50;
 }

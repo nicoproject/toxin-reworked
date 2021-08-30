@@ -43,7 +43,18 @@ form.form.form-registration
     type: 'password',
     placeholder: 'Пароль'
   })
-  +toggle('', '', 'Получать спецпредложения')
+  +checkbox({
+    type: 'toggle',
+    title: 'Toggle',
+    items: [
+      {
+        text: 'Получать спецпредложения',
+        isChecked: true,
+        toggleName: 'toggle',
+        toggleValue: 'receive-ads',
+      },
+    ]
+  })
   +buttons({
     text: 'Перейти к оплате',
     modificator: 'wide',
