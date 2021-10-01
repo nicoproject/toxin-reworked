@@ -1,0 +1,36 @@
+mixin dropdown(config)
+  -const title = config.title || 'dropdown'
+  -const type = config.type || 'guests'
+  -const items = config.items || []
+  h3 #{title}
+  if type === 'guests'
+    .dropdown-calc.dropdown-calc__guests
+      span.material-icons
+        | expand_more
+      input.dropdown-calc__header.dropdown-calc__header_type_guests(type='text', readonly, placeholder="Сколько гостей")
+      .dropdown-calc__content
+        each item in items
+          .dropdown-calc__item
+            label.dropdown-calc__label(for=`${item.inputName}-quantity`) #{item.labelTitle}
+            .dropdown-calc__quantity
+              button.dropdown-calc__button-minus(type='button')
+              input.dropdown-calc__quantity-input(class=`dropdown-calc__quantity-input_type_${item.inputName}` min=' 0', name=`${item.inputName}-quantity`, value=`${item.inputValue}`, type='number')
+              button.dropdown-calc__button-plus(type='button')
+        .dropdown-calc__footer
+          span.dropdown-calc__button-clear Очистить
+          span.dropdown-calc__button-apply Применить
+  else if type === 'rooms'
+    .dropdown-calc.dropdown-calc__rooms
+      span.material-icons
+        | expand_more
+      input.dropdown-calc__header.dropdown-calc__header_type_rooms(type='text', readonly, placeholder="Укажите кол-во комнат")
+      .dropdown-calc__content
+        each item in items
+          .dropdown-calc__item
+            label.dropdown-calc__label(for=`${item.inputName}-quantity`) #{item.labelTitle}
+            .dropdown-calc__quantity
+              button.dropdown-calc__button-minus(type='button')
+              input.dropdown-calc__quantity-input(class=`dropdown-calc__quantity-input_type_${item.inputName}` min='0', name=`${item.inputName}-quantity`, value=`${item.inputValue}`, type='number')
+              button.dropdown-calc__button-plus(type='button')
+
+

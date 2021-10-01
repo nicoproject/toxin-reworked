@@ -9,6 +9,7 @@ include ../../components/rate/rate
 include ../../components/features/features
 include ../../components/like-button/like-button
 include ../../components/review/review
+include ../../components/dropdown/dropdown
 
 
 block variables
@@ -26,8 +27,27 @@ block content
             type: 'text',
             placeholder: 'default input'
           })
-          h3 Dropdown guests
-          include ../../components/dropdown-guests/dropdown-guests
+          +dropdown({
+            title: 'dropdown guests',
+            type: 'guests',
+            items: [
+              {
+                labelTitle: 'Взрослые',
+                inputName: 'adults',
+                inputValue: 1
+              },
+              {
+                labelTitle: 'Дети',
+                inputName: 'children',
+                inputValue: 0
+              },
+              {
+                labelTitle: 'Младенцы',
+                inputName: 'toddlers',
+                inputValue: 0
+              },
+            ],
+          })
           h3 Masked input
           +textField({
             modificator: 'masked',
@@ -40,8 +60,27 @@ block content
           +textField({
             modificator: 'email',
           })
-          h3 Dropdown Rooms
-          include ../../components/dropdown-rooms/dropdown-rooms
+          +dropdown({
+            title: 'dropdown rooms',
+            type: 'rooms',
+            items: [
+              {
+                labelTitle: 'Спальни',
+                inputName: 'bedrooms',
+                inputValue: 1
+              },
+              {
+                labelTitle: 'Кровати',
+                inputName: 'beds',
+                inputValue: 0
+              },
+              {
+                labelTitle: 'Ванные комнаты',
+                inputName: 'bathrooms',
+                inputValue: 0
+              },
+            ],
+          })
           +checkbox({
             type: 'expandable',
             title: 'expandable checkbox buttons',
@@ -159,7 +198,7 @@ block content
                 title: 'Помощник для инвалидов',
                 text: 'На 1 этаже вас встретит специалист и проводит до номера.'
               },
-              
+
             ]
           })
           h3 Reviews

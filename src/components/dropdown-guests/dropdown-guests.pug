@@ -1,26 +1,27 @@
-.default-dropdown-calc.guests-dropdown-calc
+.dropdown-calc.dropdown-calc__guests
   span.material-icons
     | expand_more
-  input.default-dropdown-calc__header(type='text', readonly='', placeholder="Сколько гостей")
-  .default-dropdown__calc_content
-    .default-dropdown-calc__item
-      label.calc-item-label(for='adults-quantity') Взрослые 
-      .calc-quantity-input
-        button.minus(type='button')
-        input#adults-quantity(min='0', name='adults-quantity', value='1', type='number')
-        button.plus(type='button')
-    .default-dropdown-calc__item
-      label.calc-item-label(for='children-quantity') Дети 
-      .calc-quantity-input
-        button.minus(type='button')
-        input#children-quantity(min='0', name='children-quantity', value='0', type='number')
-        button.plus(type='button')
-    .default-dropdown-calc__item
-      label.calc-item-label(for='toddlers-quantity') Младенцы 
-      .calc-quantity-input
-        button.minus(type='button')
-        input#toddlers-quantity(min='0', name='toddlers-quantity', value='0', type='number')
-        button.plus(type='button')
-    .default-dropdown-calc__footer
-      <span class="dropdown-calc__button clear_button">Очистить</span>
-      <span class="dropdown-calc__button apply_button">Применить</span>
+  input.dropdown-calc__header.dropdown-calc__header_type_guests(type='text', readonly, placeholder="Сколько гостей")
+  .dropdown-calc__content
+    .dropdown-calc__item
+      label.dropdown-calc__label(for='adults-quantity') Взрослые 
+      .dropdown-calc__quantity
+        button.dropdown-calc__button-minus(type='button')
+        input.dropdown-calc__quantity-input.dropdown-calc__quantity-input_type_adults(min='0', name='adults-quantity', value='1', type='number')
+        button.dropdown-calc__button-plus(type='button')
+    .dropdown-calc__item
+      label.dropdown-calc__label(for='children-quantity') Дети 
+      .dropdown-calc__quantity
+        button.dropdown-calc__button-minus(type='button')
+        input.dropdown-calc__quantity-input.dropdown-calc__quantity-input_type_children(min='0', name='children-quantity', value='0', type='number')
+        button.dropdown-calc__button-plus(type='button')
+    .dropdown-calc__item
+      label.dropdown-calc__label(for='toddlers-quantity') Младенцы 
+      .dropdown-calc__quantity
+        button.dropdown-calc__button-minus(type='button')
+        input.dropdown-calc__quantity-input.dropdown-calc__quantity-input_type_toddlers(min='0', name='toddlers-quantity', value='0', type='number')
+        button.dropdown-calc__button-plus(type='button')
+    .dropdown-calc__footer
+      span.dropdown-calc__button-clear Очистить
+      span.dropdown-calc__button-apply Применить
+
