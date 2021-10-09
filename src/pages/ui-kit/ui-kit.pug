@@ -10,6 +10,7 @@ include ../../components/features/features
 include ../../components/like-button/like-button
 include ../../components/review/review
 include ../../components/dropdown/dropdown
+include ../../components/pagination/pagination
 
 
 block variables
@@ -231,7 +232,7 @@ block content
             modificator: 'wide',
           })
           h3 Pagination
-          include ../../components/pagination/pagination
+          +pagination()
           h3 Bullet List
           +bullet-list([
             'Нельзя с питомцами',
@@ -246,5 +247,5 @@ block script
     const foo = true;
     let bar = function() {};
     if (foo) {
-    bar(1 + 5)
+      bar(1 + 5)
     }

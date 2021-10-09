@@ -4,6 +4,8 @@ import 'src/main.scss'
 import 'src/components/dropdown/init'
 import 'src/components/utils/expandable/init'
 import 'src/components/checkbox/init'
+import 'src/plugins/simplePagination/jquery.simplePagination.js';
+import 'src/components/pagination/init'
 // import 'src/components/checkbox-expandable/checkbox-expandable'
 
 require('air-datepicker')

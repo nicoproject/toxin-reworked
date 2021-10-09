@@ -1,9 +1,6 @@
-.pagination-container
-  a.pagination.current-page(href="#") 1 
-  a.pagination(href="#") 2
-  a.pagination(href="#") 3 
-  span.pagination &hellip; 
-  a.pagination(href="#") 15 
-  a.pagination.last-page(href="#")
-    i.material-icons arrow_forward
-  p.pagination-description 1 – 12 из 100+ вариантов аренды  
+mixin pagination()
+  .pagination__container
+    .js-pagination__container
+    p.pagination-description 1 – 12 из 100+ вариантов аренды  
+
+
