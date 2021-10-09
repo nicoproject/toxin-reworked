@@ -14,7 +14,7 @@ mixin dropdown(config)
             label.dropdown-calc__label(for=`${item.inputName}-quantity`) #{item.labelTitle}
             .dropdown-calc__quantity
               button.dropdown-calc__button-minus(type='button')
-              input.dropdown-calc__quantity-input(class=`dropdown-calc__quantity-input_type_${item.inputName}` min=' 0', name=`${item.inputName}-quantity`, value=`${item.inputValue}`, type='number')
+              input.dropdown-calc__quantity-input(class=`dropdown-calc__quantity-input_type_${item.inputName}` min='0', name=`${item.inputName}-quantity`, value=`${item.inputValue}`, type='number')
               button.dropdown-calc__button-plus(type='button')
         .dropdown-calc__footer
           span.dropdown-calc__button-clear Очистить

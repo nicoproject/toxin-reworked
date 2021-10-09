@@ -42,6 +42,12 @@ class Dropdown {
     )
   }
 
+  _validateInput(inputValue) {
+    this.inputValue = Number(inputValue)
+    if (this.inputValue < 0 || this.inputValue > 10) this.inputValue = 1
+    return this.inputValue
+  }
+
   _calculate() {
     this.arr = []
     this.guestsCounter = 0
@@ -51,10 +57,12 @@ class Dropdown {
       const $label = element
         .closest('.dropdown-calc__item')
         .querySelector('.dropdown-calc__label')
-      if (Number($el.value) !== 0) {
-        this.arr.push(`${$el.value} ${$label.innerText}`)
-        this.guestsNumber.push($el.value)
-      } else if (Number($el.value) === 0) {
+      this.inputValue = this._validateInput($el.value)
+      if (this.inputValue !== 0) {
+        $el.value = this.inputValue
+        this.arr.push(`${this.inputValue} ${$label.innerText}`)
+        this.guestsNumber.push(this.inputValue)
+      } else if (this.inputValue === 0) {
         this._adjustButtonsOpacity()
       }
     })
@@ -76,9 +84,10 @@ class Dropdown {
   _adjustButtonsOpacity() {
     this.calculationList.forEach((element) => {
       const $el = element
-      if (Number($el.value) === 0) {
+      this.inputValue = this._validateInput($el.value)
+      if (this.inputValue === 0) {
         $el.parentNode.children[0].style.opacity = '0.5'
-      } else if (Number($el.value) !== 0) {
+      } else if (this.inputValue !== 0) {
         $el.parentNode.children[0].style.opacity = '1'
       }
     })

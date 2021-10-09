@@ -1,4 +1,5 @@
 include ../../components/buttons/buttons
+include ../../components/dropdown/dropdown
 
 form.form.form-rooms-search
   h3.form-title Найдём номера под ваши пожелания 
@@ -17,8 +18,27 @@ form.form.form-rooms-search
         type: 'text',
         placeholder: 'ДД.ММ.ГГГГ'
       })      
-  h3 Гости
-  include ../dropdown-guests/dropdown-guests
+  +dropdown({
+    title: 'Гости',
+    type: 'guests',
+    items: [
+      {
+        labelTitle: 'Взрослые',
+        inputName: 'adults',
+        inputValue: 1
+      },
+      {
+        labelTitle: 'Дети',
+        inputName: 'children',
+        inputValue: 0
+      },
+      {
+        labelTitle: 'Младенцы',
+        inputName: 'toddlers',
+        inputValue: 0
+      },
+    ],
+  })
   +buttons({
     text: 'Подобрать номер',
     modificator: 'wide',

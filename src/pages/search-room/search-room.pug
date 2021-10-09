@@ -5,6 +5,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radiobuttons/radiobuttons
 include ../../components/link/link
 include ../../components/rate/rate
+include ../../components/dropdown/dropdown
 
 mixin renderRoomFound(room) 
   .room-card-thumbnail-container
@@ -49,8 +50,27 @@ block content
       .sidebar.sidebar-room-search
         h3 Даты пребывания в отеле
         include ../../components/dropdown-date/dropdown-date
-        h3 Гости
-        include ../../components/dropdown-guests/dropdown-guests
+        +dropdown({
+          title: 'Гости',
+          type: 'guests',
+          items: [
+            {
+              labelTitle: 'Взрослые',
+              inputName: 'adults',
+              inputValue: 1
+            },
+            {
+              labelTitle: 'Дети',
+              inputName: 'children',
+              inputValue: 0
+            },
+            {
+              labelTitle: 'Младенцы',
+              inputName: 'toddlers',
+              inputValue: 0
+            },
+          ],
+        })
         h3 Диапазон цены
         input.js-range-slider(type="text", name="my_range", value="")
         span.range-slider-hint Стоимость за сутки пребывания в номере
@@ -76,8 +96,27 @@ block content
               
             ]
           })
-        h3 Удобства номера
-        include ../../components/dropdown-rooms/dropdown-rooms
+        +dropdown({
+          title: 'Удобства номера',
+          type: 'rooms',
+          items: [
+            {
+              labelTitle: 'Спальни',
+              inputName: 'bedrooms',
+              inputValue: 1
+            },
+            {
+              labelTitle: 'Кровати',
+              inputName: 'beds',
+              inputValue: 0
+            },
+            {
+              labelTitle: 'Ванные комнаты',
+              inputName: 'bathrooms',
+              inputValue: 0
+            },
+          ],
+        })        
         +checkbox({
           type: 'expandable',
           title: 'Дополнительные удобства',
