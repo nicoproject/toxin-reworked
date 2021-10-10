@@ -11,6 +11,7 @@ include ../../components/like-button/like-button
 include ../../components/review/review
 include ../../components/dropdown/dropdown
 include ../../components/pagination/pagination
+include ../../components/dropdown-date/dropdown-date
 
 
 block variables
@@ -55,8 +56,8 @@ block content
           })
           h3 Date Dropdown
           .flex-between
-            include ../../components/dropdown-date/dropdown-date
-            include ../../components/dropdown-date/dropdown-date
+            +dropdownDate()
+            +dropdownDate()
           h3 Email Subscription 
           +textField({
             modificator: 'email',
