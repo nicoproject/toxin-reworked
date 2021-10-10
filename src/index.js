@@ -7,22 +7,13 @@ import 'src/components/checkbox/init'
 import 'src/components/pagination/init'
 import 'src/components/text-field/init'
 import 'src/components/dropdown-date/init'
+import 'src/plugins/rangeslider/init'
 
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
 
-$('.js-range-slider').ionRangeSlider({
-  type: 'double',
-  min: 0,
-  max: 10000,
-  from: 5000,
-  to: 10000,
-  grid: false,
-  skin: 'round',
-  postfix: "<span class='rub'>Р</span>",
-  hide_min_max: true,
-})
+
 
 const el = document.getElementById('myChart')
 const gradientOrange = el.getContext('2d').createLinearGradient(0, 0, 0, 100)
