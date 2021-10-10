@@ -1,3 +1,5 @@
+import 'src/plugins/simplePagination/jquery.simplePagination.js'
+
 class Pagination {
   constructor($el) {
     this.$el = $el
