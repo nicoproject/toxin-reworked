@@ -4,7 +4,7 @@ function handlePagination() {
   const $paginationContainer = $('.js-pagination__container')
 
   const pagination = new Pagination($paginationContainer)
-  pagination()
+  pagination._init()
 }
 
 $(window).on('load', handlePagination)

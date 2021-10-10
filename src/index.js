@@ -6,12 +6,11 @@ import 'src/components/utils/expandable/init'
 import 'src/components/checkbox/init'
 import 'src/plugins/simplePagination/jquery.simplePagination.js';
 import 'src/components/pagination/init'
+import 'src/components/text-field/init'
 
 require('air-datepicker')
 require('jquery-mask-plugin')
 require('ion-rangeslider')
-
-$('.text-field_masked').mask('00.00.0000', { placeholder: 'ДД.ММ.ГГГГ' })
 
 $('.date-dropdown')
   .datepicker({
