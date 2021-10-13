@@ -6,6 +6,7 @@ include ../../components/checkbox/checkbox
 include ../../components/radiobuttons/radiobuttons
 include ../../components/link/link
 include ../../components/card-booking/card-booking
+include ../../components/card-registration/card-registration
 
 
 block variables
@@ -19,7 +20,7 @@ block content
       h3 Rooms search form
       include ../../components/card-room-search/card-room-search
       h3 Registration form
-      include ../../components/card-registration/card-registration
+      +card-registration()
 
     .cards-col
       h3 Room booking

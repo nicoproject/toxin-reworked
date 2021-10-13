@@ -1,0 +1,61 @@
+.card_type_registration {
+  .card__form {
+    position: relative;
+    width: 380px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0 30px;
+  }
+
+  .card__form-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: none;
+    color: $dark-shade-100;
+    line-height: 30px;
+    margin: 39px 0px 20px 0;
+    text-align: left;
+    letter-spacing: 0;
+  }
+
+  .text-field {
+    margin: 5px 0 8px 0;
+  }
+
+  .card__bith-title {
+    margin-top: 23px;
+    padding-left: 1px;
+  }
+
+  .card__sign-in-title {
+    margin-top: 21px;
+    padding-left: 1px;
+  }
+
+  .default-button {
+    margin: 24px 0 5px 0;
+  }
+
+  .checkbox__toggle {
+    margin-top: 11px;
+  }
+
+  .card__already-registered-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 28px 0;
+
+    .default-button__border {
+      margin: 0;
+      width: 97px;
+    }
+
+    .card__already-registered {
+      margin-top: 9px;
+    }
+  }
+}

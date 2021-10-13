@@ -1,64 +1,69 @@
 include ../../components/buttons/buttons
 include ../../components/radiobuttons/radiobuttons
 
-form.form.form-registration
-  h3.form-title Регистрация аккаунта 
-  +textField({
-    blockElement: 'first-name',
-    type: 'text',
-    placeholder: 'Имя'
-  })
-  +textField({
-    blockElement: 'last-name',
-    type: 'text',
-    placeholder: 'Фамилия'
-  })
-  +radiobuttons({items: [
-      {
-        labelText: 'Мужчина',
-        checked: true,
-        name: 'gender',
-        value: 'male'
-      },
-      {
-        labelText: 'Женщина',
-        name: 'gender',
-        value: 'female'
-      },
-    ]
-  })
-  h3 Дата рождения
-  +textField({
-    blockElement: ['masked date-dropdown', 'birthday-date'],
-    type: 'text',
-    placeholder: 'ДД.ММ.ГГГГ'
-  })
-  h3 Данные для входа в сервис
-  +textField({
-    type: 'email',
-    placeholder: 'Email'
-  })
-  +textField({
-    blockElement: 'password',
-    type: 'password',
-    placeholder: 'Пароль'
-  })
-  +checkbox({
-    type: 'toggle',
-    title: 'Toggle',
-    items: [
-      {
-        text: 'Получать спецпредложения',
-        isChecked: true,
-        toggleName: 'toggle',
-        toggleValue: 'receive-ads',
-      },
-    ]
-  })
-  +buttons({
-    text: 'Перейти к оплате',
-    modificator: 'wide',
-  })
-  .aready-registered-container
-    span.already-registered Уже есть аккаунт на Toxin 
-    +createLink('default-button__border signIn-button', '/mock_adress', '<span>Войти</span>')
+mixin card-registration()
+  .card_type_registration
+    form.card__form
+      h3.card__form-title Регистрация аккаунта 
+      +textField({
+        blockElement: 'first-name',
+        type: 'text',
+        placeholder: 'Имя'
+      })
+      +textField({
+        blockElement: 'last-name',
+        type: 'text',
+        placeholder: 'Фамилия'
+      })
+      +radiobuttons({items: [
+        {
+          labelText: 'Мужчина',
+          checked: true,
+          name: 'gender',
+          value: 'male'
+        },
+        {
+          labelText: 'Женщина',
+          name: 'gender',
+          value: 'female'
+        },
+        ]
+      })
+      h3.card__bith-title Дата рождения
+      +textField({
+        blockElement: ['masked date-dropdown', 'birthday-date'],
+        type: 'text',
+        placeholder: 'ДД.ММ.ГГГГ'
+      })
+      h3.card__sign-in-title Данные для входа в сервис
+      +textField({
+        type: 'email',
+        placeholder: 'Email'
+      })
+      +textField({
+        blockElement: 'password',
+        type: 'password',
+        placeholder: 'Пароль'
+      })
+      +checkbox({
+        type: 'toggle',
+        title: ' ',
+        items: [
+          {
+            text: 'Получать спецпредложения',
+            isChecked: false,
+            toggleName: 'toggle',
+            toggleValue: 'receive-ads',
+          },
+        ]
+      })
+      +buttons({
+        text: 'Перейти к оплате',
+        modificator: 'wide',
+      })
+      .card__already-registered-container
+        span.card__already-registered Уже есть аккаунт на Toxin 
+        +buttons({
+          text: 'Войти',
+          modificator: 'border',
+        })
