@@ -4,7 +4,7 @@ mixin dropdown(config)
   -const items = config.items || []
   h3 #{title}
   if type === 'guests'
-    .dropdown-calc.dropdown-calc__guests
+    .js-dropdown-calc.dropdown-calc.dropdown-calc__guests
       span.material-icons
         | expand_more
       input.dropdown-calc__header.dropdown-calc__header_type_guests(type='text', readonly, placeholder="Сколько гостей")
@@ -20,7 +20,7 @@ mixin dropdown(config)
           span.dropdown-calc__button-clear Очистить
           span.dropdown-calc__button-apply Применить
   else if type === 'rooms'
-    .dropdown-calc.dropdown-calc__rooms
+    .js-dropdown-calc.dropdown-calc.dropdown-calc__rooms
       span.material-icons
         | expand_more
       input.dropdown-calc__header.dropdown-calc__header_type_rooms(type='text', readonly, placeholder="Укажите кол-во комнат")

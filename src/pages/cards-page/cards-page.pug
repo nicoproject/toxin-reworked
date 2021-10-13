@@ -5,6 +5,8 @@ include ../../components/text-field/text-field
 include ../../components/checkbox/checkbox
 include ../../components/radiobuttons/radiobuttons
 include ../../components/link/link
+include ../../components/card-booking/card-booking
+
 
 block variables
   - var title = 'Toxin ReWorked: Cards page';
@@ -21,7 +23,7 @@ block content
 
     .cards-col
       h3 Room booking
-      include ../../components/card-booking/card-booking
+      +card-booking()
       h3 Sign-in form
       include ../../components/card-sign-in/card-sign-in
 

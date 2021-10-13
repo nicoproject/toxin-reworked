@@ -1,0 +1,185 @@
+.card_type_room-booking {
+  .card__form {
+    position: relative;
+    width: 380px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 0 30px;
+    margin-bottom: 25px;
+  }
+
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 43px -1px 19px 0;
+  }
+
+  .card__column_position_relative {
+    position: relative;
+  }
+
+  .card__column_display_inline-flex {
+    display: inline-flex;
+  }
+
+  .card__number-sign {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .card__room-number {
+    margin-left: 3px;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark-shade-100;
+  }
+
+  .card__room-class {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  .card__room-class_type_lux {
+    margin-left: 2px;
+    color: $primary-color;
+  }
+
+  .card__room-price,
+  .card__ruble,
+  .card__room-term {
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  .card__room-price,
+  .card__ruble {
+    font-weight: bold;
+  }
+
+  .card__room-price {
+    font-size: 14px;
+    margin-top: 3px;
+    display: inline-block;
+  }
+ 
+  .card__ruble {
+    padding-top: 3px;
+    padding-left: 1px;
+  }
+
+  .card__room-term {
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 5px;
+    padding-top: 4px;
+  }
+
+  .card__search-dates-container {
+    margin-bottom: 21px;
+    display: flex;
+    justify-content: space-between;
+
+    h3.card__arrival-title {
+      padding-left: 1px;
+    }
+
+    h3.card__departure-title {
+      padding-left: 0px;
+    }
+  }
+
+  .js-date-dropdown__wrapper {
+    margin-top: 4px;
+  }
+
+  .js-dropdown-calc {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  .card__summary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 21px;
+
+    .card__summary-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    .card__column {
+      width: 70%;
+    }
+
+    .card__column:nth-child(2n) {
+      text-align: right;
+      width: 28%;
+    }
+
+    .card__service-name {
+      position: relative;
+      display: block;
+      line-height: 18px;
+    }
+
+    .card__service-name::after {
+      position: absolute;
+      right: -15px;
+      top: -2px;
+      width: 20px;
+      height: 20px;
+      font-size: 24px;
+      content: '\e88f';
+      font-family: $iconsFont;
+      color: $dark-shade-25;
+    }
+
+    .card__service-name_content-after_false.card__service-name::after {
+      display: none;
+    }
+
+    .card__total-price {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 14px;
+    }
+
+    .total-price-border-line {
+      position: relative;
+      width: 100%;
+    }
+
+    .total-price-border-line::before {
+      content: '';
+      width: 56%;
+      height: 1px;
+      border-top: 1px dotted grey;
+      position: absolute;
+      left: 19%;
+      top: -7px;
+    }
+
+    .card__total-price-label,
+    .card__total-price-amount {
+      font-family: $secondFont;
+      font-size: 19px;
+      color: $dark-shade-100;
+      font-weight: bold;
+    }
+  }
+}

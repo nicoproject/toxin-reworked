@@ -1,76 +1,71 @@
 include ../../components/buttons/buttons
 include ../../components/dropdown/dropdown
+include ../../components/dropdown-date/dropdown-date
 
-form.form.form-room-booking
-  .room-booking-header
-    .column
-      spam.number-sign №  
-      span.room-number 888
-      span.room-class.room-class__lux  люкс
-    .column
-      span.room-price 990
-      span.ruble  р 
-      span.room-term в сутки        
-  .rooms-search-dates-container.flex-between
-    .column
-      h3 Прибытие
-      +textField({
-        blockElements: ["masked", "date-input date-dropdown"], 
-        type: "text", 
-        placeholder: "ДД.ММ.ГГГГ"
+mixin card-booking()
+  .card_type_room-booking
+    form.card__form
+      .card__header
+        .card__column
+          spam.card__number-sign №
+          span.card__room-number 888
+          span.card__room-class.card__room-class_type_lux люкс
+        .card__column.card__column_display_inline-flex
+          span.card__room-price 9 990
+          span.card__ruble  ₽ 
+          span.card__room-term в сутки
+      .card__search-dates-container
+        .card__column
+          h3.card__arrival-title Прибытие
+          +dropdownDate()
+        .card__column
+          h3.card__departure-title Выезд
+          +dropdownDate()
+      +dropdown({
+        title: 'Гости',
+        type: 'guests',
+        items: [
+          {
+            labelTitle: 'Взрослые',
+            inputName: 'adults',
+            inputValue: 1
+          },
+          {
+            labelTitle: 'Дети',
+            inputName: 'children',
+            inputValue: 0
+          },
+          {
+            labelTitle: 'Младенцы',
+            inputName: 'toddlers',
+            inputValue: 0
+          },
+        ],
       })
-    .column
-      h3 Выезд
-      +textField({
-        blockElements: ["masked date-input", "date-dropdown"], 
-        type: "text", 
-        placeholder: "ДД.ММ.ГГГГ"
+
+      .card__summary
+        .card__summary-row
+          .card__column
+            span.card__service-name.card__service-name_content-after_false 9 990₽ х 4 суток
+          .card__column
+            span.card__service-price 39 960₽
+        .card__summary-row
+          .card__column
+            span.card__service-name Сбор за услуги: скидка 2 179₽
+          .card__column
+            span.card__service-price 0₽
+        .card__summary-row
+          .card__column
+            span.card__service-name Сбор за дополнительные услуги
+          .card__column
+            span.card__service-price 300₽
+
+        .card__total-price 
+          span.card__total-price-label Итого
+          span.card__total-price-amount 38 081 р
+        .total-price-border-line
+
+      +buttons({
+        text: 'Забронировать',
+        modificator: 'wide',
       })
-  +dropdown({
-    title: 'Гости',
-    type: 'guests',
-    items: [
-      {
-        labelTitle: 'Взрослые',
-        inputName: 'adults',
-        inputValue: 1
-      },
-      {
-        labelTitle: 'Дети',
-        inputName: 'children',
-        inputValue: 0
-      },
-      {
-        labelTitle: 'Младенцы',
-        inputName: 'toddlers',
-        inputValue: 0
-      },
-    ],
-  })
-
-  .room-booking-summary
-    .room-booking-summary__summary-row
-      .column
-        span.summary-service-name.summary-service-name_no-info 9 990₽ х 4 суток
-      .column
-        span.summary-service-price 39 960₽
-    .room-booking-summary__summary-row
-      .column
-        span.summary-service-name Сбор за услуги: скидка 2 179₽
-      .column
-        span.summary-service-price 0₽
-    .room-booking-summary__summary-row
-      .column
-        span.summary-service-name Сбор за дополнительные услуги
-      .column
-        span.summary-service-price 300₽
-
-    .room-booking-total-price 
-      span.total-price-label Итого
-      span.total-price-amount 38 081 р
-    .total-price-border-line
-
-  +buttons({
-    text: 'Забронировать',
-    modificator: 'wide',
-  })

@@ -21,13 +21,14 @@
 @import '~src/components/pagination/pagination';
 @import '~src/components/bullet-list/bullet-list';
 @import '~src/components/card-room-preview/card-room-preview';
+@import '~src/components/card-booking/card-booking';
 
 @import '~src/plugins/datepicker/datepicker';
 @import '~src/plugins/rangeslider/rangeslider';
 
-@import '~src/pages/default-layout/layout';
-@import '~src/pages/default-layout/layout-forms';
-@import '~src/pages/default-layout/layout-sign-in';
+@import '~src/pages/default-layout/default-layout';
+@import '~src/pages/default-layout/default-layout-forms';
+@import '~src/pages/default-layout/default-layout-sign-in';
 @import '~src/pages/landing-page/landing-page';
 @import '~src/pages/search-room/search-room';
 @import '~src/pages/registration-page/registration-page';

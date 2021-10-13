@@ -1,7 +1,7 @@
 import DropdownDate from './DropdownDate'
 
 function handleDropdownDates() {
-  const dropdownDates = document.querySelectorAll('.date-dropdown')
+  const dropdownDates = document.querySelectorAll('.js-date-dropdown')
   dropdownDates.forEach((input) => {
     const dropdownDate = new DropdownDate(input)
     dropdownDate._init()

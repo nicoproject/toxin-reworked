@@ -12,7 +12,7 @@ class DropdownDate {
   }
 
   _checkParentElement() {
-    if ($(this.$el).hasClass('date-dropdown')) this.isParent = true
+    if ($(this.$el).hasClass('js-date-dropdown')) this.isParent = true
   }
 
   _createDatePicker() {
